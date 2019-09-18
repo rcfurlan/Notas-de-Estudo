@@ -1,0 +1,1383 @@
+
+  ++++++++++++++++++++++++++++++++++++++++++++++++++  Glossário e Conceitos +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  
+- BI é um conjunto de tecnicas e conceitos. 
+  O BI trabalha com a COLETA, ORGANIZAÇÃO, ANÁLISE, VISUALIZAÇÃO, COMPARTILHAMENTO e MONITORAMENTO DE INFORMAÇÕES que oferece
+  suporte a gestão de negócios para tomada de decisões com base em evidências. 
+  É o conjunto de TEORIAS, METODOLOGIAS, PROCESSOS, ESTRUTURAS e TECNOLOGIAS que transformam uma 
+  grande quantidade de dados brutos em informação útil para a tomada de decisões estratégicas. O termo BI foi criado pelo
+  Gartner Group definido como um termo genérico que inclui APLICAÇÕES, INFRAESTRUTURA, FERRAMENTAS e MELHORES PRÁTICAS que permite
+  o acesso e análise de informações para melhorar e otimizar decisões e desempenho. Portando BI é um conjunto de técnicas e 
+  ferramentas que permite que a organização utilize a análise das informações para o suporte a tomada de decisão. O objetivo é 
+  entregar a informação certa, para a pessoa certa no tempo certo.
+  
+- BI: procura descrever e explicar o passado. Big Data: procura prever e explicar o futuro.
+
+- Estatistica é uma ferramena matematica utilizada para extrair informação de um conjunto de dados.
+
+- No BI se usa estatistica descritiva que envolve a organização, resumo e a representação dos dados.
+
+- No Big Data se usa estatistica inferencial que envolve o uso de uma amostra para chegar a conclusoes sobre uma população usando
+  como ferramenta a teoria de probabilidades.
+
+- As organizações são baseadas na pirâmede organizacional. Na base está o nivel operacional ou chão de fábrica. Neste nível, 
+  os "operários" conduzem o dia-a-dia da organização. As decições tomadas por eles são de curto prazo, com foco na resolução
+  imediata de um problema. No nível intermediário está o nível tático, ocupado por gerentes e coordenadores. Estes tomam decisões
+  de médio prazo, com foco em desempenho de pessoal, de processos, de fornecedores, etc. No alto da pirâmide esta o nível 
+  estratégico, ocupado por presidente e diretores. As decisões são para o longo prazo com foco na direção em que a organização deve
+  seguir para se manter competitiva ou se tornar líder de mercado.
+  
+- Projetos de BI envolvem muito tempo e dinheiro.  
+
+- Pricipais problemas enfrentados em um implementação de BI: Diferentes plataformas e arquiteturas, base de dados inacessiveis,
+  qualidade de dados, falta de documentação, falta de comprometimento dos analistas do cliente e desconhecimento do negocio.  
+  
+- Principais áreas de BI: 1. ETL ; 2. CUBOS/OLAP ; 3. Relatórios. Para cada uma dessas áreas temos diversas ferramentas de diversos
+  fabricantes.  
+  
+- Checklist para sucesso em um projeto de BI:
+  1. Entrega valor? Nao adianta entregar o projeto no prazo e no custo se nao entrega valor, que nao cumpre aquilo pra que foi
+     planejado. Ex Dashboard que ninguem consulta, armazem que ninguem confia, indicador de performance que o gestor olha com 
+	 desconfiança.
+  2. Os criterios de sucesso estão claros? Ex usuarios satisfeitos, aumento de vendas ou redução de custo apos implantação do projeto,
+     redução no numero de fraudes, aumento de produtividade
+  3. O projeto esta em conformidade com as diretivas de governança de dados da organização? Ex se obece as politicas, processos e usos
+     da informação
+  4. As tecnologias utilizadas sao maduras e estaveis? 
+  5. A infraestrutura necessaria ao projeto é conhecida? Ex conhecer as necessidades do projeto quanto a armazenamento, segurança,
+     processamento, desempenho de rede, custo de licenciamento, custo da disponibilidade da solução, etc
+  6. O projeto preve o crescimento da solução?
+  7. Manuais de implantaçao, manutençao e treinamento estão planejados? Ex pode ser necessario fazer a implantação em mais de um local,
+     a equipe que faz a manutenção não é a mesma que desenvolveu e então precisa de manuais.
+  8. Todas as fontes de dados foram identificadas? São acessiveis? Ex planilhas mantidas na area de trabalho de um analista, sistemas 
+     sombra ou sistemas informais usados de forma auxiliar por algum departamento da empresa, sistemas que criptografam a informação
+  9. As fontes de dados possuem documentação apropriada? Ex sistemas com centenas ou milhares de tabelas que nao tem documentação
+     acessivel e tabelas com nomes gerados por um programa com nomes nada sugestivos podem inviabilizar o projeto ou aumentar muito
+	 o tempo de desenvolvimento
+ 10. Os requisitos das ferramentas necessarias ao projeto estao definidas? Ex ferramenta de BI self-service, de ETL, de modelagem, 
+     de cubo, de dashboard, etc
+ 11. A latência entre a carga e produção da informação é suficiente/viavel para a produção de valor? Pode ser verificado por meio de uma
+     POC ou um piloto.
+ 12. As regras de negócio são conhecidas e existe um consenso na organização sobre elas? Isso lida com medo das pessoas ou conflito 
+     de opinião entre elas. Assunto complexo de se tratar.
+ 13. Os requisitos de cultura e idioma estão claros? São suportados pelas ferramentas?
+ 14. As necessidades de aquisições são conhecidas? Ex contratar consultoria especializada, fazer cotações, etc
+ 15. O orçamento é adequado para as aquisições necessarias?
+ 16. O tempo para entrega pelos fornecedores é conhecido e atende os requisitos do projeto?
+ 17. Criterios de seleção de fornecedores são conhecidos?
+ 18. Existe um plano para avaliar a qualidade dos dados?
+ 19. Existe um plano de limpeza e tratamento dos dados?
+ 20. Existe um plano de testes? Ex testar o processo de ETL, testar a performance, testar as medidas, etc
+ 21. Os requisitos de qualidade do projeto (objetivo) são conhecidos, consensuais e factíveis?
+ 22. O orçamento do projeto é realista? 
+ 23. Foi planejado um orçamento para contingências? Em um projeto complexo muitas coisas podem dar errado e algumas de fato darão
+     errado
+ 24. Existe um ROI (valor de retorno de investimento) para o projeto? 
+ 25. Todas as competências para o projeto foram identificadas?
+ 26. Existem no mercado profissionais com as competencias identificadas?
+ 27. Existe um plano para capacitação dos usuarios finais?
+ 28. Existe um plano de evangelização das partes interessadas? Ex dar o entendimento do valor que será agregado a organização
+     com o sucesso do projeto. 
+	 
+- BI selfie-service: é uma nova categoria de BI onde os usuários, por meio de uma ferramenta (Power BI, QuickView, SAP WebIntelligence),
+  criam seus próprios relatórios para análise, diminuindo assim a dependência e filas de atendimento na TI.	 
+  
+- Livros:
+  1. Data Warehouse Tool Kit - Kimball
+  2. Business Intelligence com SQL Server 2012 na prática - Mafra  
+  
+- SE VOCE NÃO SOUBER FAZER A PERGUNTA CORRETA, NÃO VAI DESCOBRIR NADA - William Deming	
+
+- KPI (Key Performance Indicators): mede o sucesso da organização ou area dela pela comparação do resultado com um objetivo
+  estabelecido (meta).
+
+- BSC (Balance Scorecard): metodo de avaliação da organização por meio de quatro indicadores. 
+  1. Financeiro: criar novos indicadores de desempenho para que os acionistas possam ter melhor rentabilidade dos seus investimentos;
+  2. Clientes: saber qual o grau de satisfação dos clientes com a empresa;
+  3. Processos internos: a empresa deve identificar se há produtos com problemas, se foram entregues no tempo previsto e apostar na 
+     inovação dos seus produtos;
+  4. Aprendizado e crescimento: diz respeito à capacidade e motivação do pessoal, e a um melhor sistema de informação na empresa.
+  Na análise do BSC, se os quatros indicadores estiverem aplicados de acordo com os objetivos propostos pela entidade, ou seja, 
+  se estiverem equilibrados, significa que a empresa conseguirá ter um melhor desempenho, permitindo a concepção de novas estratégias.  
+
+- Brainstorm - tempestade de ideias. Reunioes que todos podem expor suas ideias sobre dado tema.  
+
+- DADOS É O QUE VOCE PRECISA PARA FAZER ANALYTICS. INFORMAÇÃO É O QUE VOCE PRECISA PARA FAZER NEGÓCIOS - John Owen  
+
+- Dado é o registro de algo que aconteceu. São ocorrencias. Dados são registros armazenados resultantes de algum processo 
+  ou operação ocorrida. Isoladamente não possuem significado relevante.
+
+- Quando os dados são submetidos à análise e são contextualizados geram INFORMAÇÃO.
+  
+- Dados processados são informação. Informação processada é conhecimento. Conhecimento processado é sabedoria.
+
+- O DADO isoladamente nao é nada. Apenas quando o DADO é inserido em um contexto ele se transforma em INFORMAÇÃO. A INFORMAÇÃO
+  combinada com o USO e EXPERIÊNCIA gera o CONHECIMENTO.
+  
+- DADOS EXISTEM EM ABUNDÂNCIA. O QUE É ASSUSTADOR É EXTRAIR SABEDORIA DELES - Hal Varian  
+
+- Metadados são dados sobre os dados. São armazenados em um dicionário ou catálogo de dados. Informam o que é um determinado dado.
+
+- O nível de detalhamento da informação é conhecido como granulidade. Quanto maior a granulidade maior o volume de dados, maior 
+  tempo de carga, mais infraestrutura, mais tempo de processamento, mais lentidão (usuario).
+  
+- Um banco de dados é uma coleção organizada de dados. São arquivos ou conjunto de arquivos que contém os dados.
+
+- SGBD (Sistema de Gerenciamento de Banco de Dados): Coleção de softwares que permite criar e gerenciar um banco de dados.
+  Por que usar um?
+  1. Controlar redundância
+  2. Compartilhamento de dados
+  3. Independência de dados
+  4. Segurança
+  5. Backup e recuperação de falhas
+  6. Forçar restrições de integridade
+  7. Aumentar a produtividade e disponibilidade
+  8. Flexibilidade e padronização
+
+- OLTP ( Processamento OnLine Transacional) : Otimizado para "baixo" armazenamento, performance em DML - Linguagem de Manipulação
+  de Dados ( insert, update, delete ), em DTL - Liguagem de Transação de Dados ( commit e roolback ), baseado nas formas normais
+  ( campos multivalorados e vetorizados (conjunto de elementos do mesmo tipo, ex: telefones)) que segmentam as tabelas do banco,
+  baixa performance em select ( muitos joins ), modelagem Entidade-Relacionamento, orientado a processo, não mantém histórico,
+  voltado para minimizar redundância e manter integridade de dados.
+  
+- OLAP ( Processamento OnLine Analitico   ) : Otimizado para alta performance de consultas ( select ), tabelas desnormalizadas,
+  modeladem Multidimensional, ( Esquema Estrela e Floco de Neve ), alta capacidade de armazanamento, Dados agrupados e históricos,
+  orientado ao desempenho do negócio. 
+
+- Nivel Operacional ( OLTP )
+- Nivel Tatico      ( OLTP e OLAP )
+- Nivel Estrategico ( OLAP )
+
+- Modelos de banco de dados: Modelo Hierarquico, Modelo em Rede, Modelo Ralacional, Modelo Multidimensional, Modelo Orientado a
+  Objeto, Modelo Não Relacional
+  
+- Modelo Relacional: Artigo publicado pelo Dr Cood em 1970. "A Relational Model of Data for Large Shared Data Banks"
+
+- Modelo Ralacional - Pensado para:
+  1. Suporte a grandes volumes de transações (operações) - incluir, alterar, apagar e consultar
+  2. Ser rapido (algoritmos que maximizam as operações)
+  3. Manter integridade dos dados
+  4. Acesso concorrente
+  
+- ACID (Atomicidade, Consistencia, Isolamento, Durabilidade) são características que um BD relacional deve ter
+  1. Atomicidade: Em um conjunto de transações, todas devem ter sucesso ou nenhuma terá.
+  2. Consistencia: As regras de integridade são seguidas
+  3. Isolamento: O resultado da transação executada será mantida, mesmo que haja uma transação concorrente não finalizada
+  4. Durabilidade: Os dados de uma transação devem persistir, não podem ser perdidos
+
+- MER (Modelo Entidade-Relacionamento): é uma idéia conceitual abstrata em que listamos as entidade, atributos e os relacionamentos
+  entre eles com informações sobre o tipo de dados, restrições e outros parâmetros.
+  
+- DER (Diagrama Entidade-Relacionamento): é a representação gráfica das idéias elaboradas no MER. Retângulos são as entidades, 
+  Elipses são atributos, Losângulos são os relacionamentos e Linhas ligam entidades a relacionamentos e entidades a atributos.
+  
+- O processo de modelagem é composto de 3 níveis:
+  1. Modelagem Conceitual: planejamento de quais processos e quais informações do mundo real devem ser armazenadas e trabalhadas
+     no banco de dados. Determinação das entidades e seus relacionamentos. Essa fase independe do SGBD que será escolhido.
+  2. Modelagem Lógica: representação por meio de diagramas das entidades, atributos, relacionamentos e regras de consistência.
+     Nesta fase o usuário ainda, com alguma ajuda, consegue entender o que está sendo planejado. Também não depende do SGBD
+	 escolhido.
+  3. Modelagem Física: nesta fase ocorre o detalhamento técnico. São definidos os nomes dos objetos (tabelas, campos, tipos de dados,
+     funções, triggers, regras de consistência, relacionamentos, etc). A partir daqui já se pode definir o SGBD mais adequado. 
+	 
+- Atributos são características de uma Entidade. Podem ser: 
+  1. Simples: não possue nenhuma caracterítica especial. São indivisíveis, atômicos.
+  2. Composto: formado por itens menores. Pode ser dividido em atributos simples. Ex: endereço
+  3. Multivalorado: pode conter mais de um valor para a mesma informação. Ex: telefone
+  4. Determinante: atributo que garante que a instância da entidade será única.
+  
+- Tipos de chaves em base de dados: Primary key, Foreign key, Surrogate key, Constraints, Naturais e Artificiais. A diferença entre
+  estas chaves são os conceitos. Os comandos para criá-las são os mesmos.
+  Ambiente OLTP (Chaves fisicas)
+  1. Chave primaria natural: a chave é o proprio registro. Ex: CPF. A desvantagem é que se o modelo de nogócio muda, deve-se 
+     remodelar todo o banco de dados. Ex: a organizaão se tornou multinacional. Os funcionários de outros países não tem CPF.
+  2. Chave primaria artificial: é a mais adotada e recomendada. Normalmente é gerada por um sequence. Podemos usar ocupado
+     constraint unique (restrição) para que o banco rejeite a repetição do CPF, por exemplo.
+  Ambiente OLAP (Chaves logicas)
+  1. Chave substituta (surrogate key): Um registro que tenho chave 100 no ambiente OLTP pode ter chave 250 no ambiente OLAP.
+  2. Chave de negócio (Business key): Uma chave que é primary key no OLTP quando é carregada no OLAP passa a se chamar 
+     Business key.  
+  
+- Tabela de Domínio: especifica por meio de chave estrangeira quais são os valores validos para um determinado campo.
+
+- Normalização é um processo a partir do qual se aplicam regras a todas as tabelas do banco de dados com o objetivo de 
+  evitar falhas no projeto, como redundância de dados e mistura de diferentes assuntos numa mesma tabela e também evitar anomalias
+  de inserção, modificação e exclusão sem erros ou inconsistências. 
+  Ao efetuar o processo de normalização, os dados cadastrados no banco de dados ficarão organizados de uma forma melhor e ocuparão 
+  menos espaço físico. Entretanto, o processo de normalização também faz aumentar o número de tabelas e em muitos casos pode ser uma 
+  tarefa difícil de ser realizada. Além disso, bancos de dados normalizados além do necessário podem ter desempenho ruim e/ou 
+  complexidade excessiva.
+  A principal finalidade do processo de normalização é eliminar as anomalias de inserção, atualização e exclusão. 
+  A anomalia ocorre quando não há forma de se cadastrar alguma determinada informação sem que alguma outra informação também seja 
+  diretamente cadastrada. 
+  Por exemplo, imagine que você tenha uma tabela funcionário com os seguintes dados: codigo, nome, projeto, onde a tabela projeto 
+  corresponde ao nome do projeto no qual um funcionário foi alocado. E então você tem os seguintes dados:
+  codigo   nome     projeto
+  1        Pedro    Vendas
+  2        Maria    Vendas
+  3        Carlos   Cadastro de clientes
+  E então surgiu um projeto novo: O de emissão de notas fiscais. Como você cadastra esse novo projeto? A resposta é que não dá para 
+  cadastrar, pois para fazer isso você teria que ter algum funcionário nesse projeto - ou seja, temos uma anomalia de inserção.
+  Se no exemplo anterior, o funcionário Carlos fosse desligado da empresa e o removermos da tabela, a informação sobre o projeto de 
+  cadastro de clientes é perdida. Isso é um efeito colateral indesejado - é a anomalia de exclusão. Se no entanto ele apenas fosse 
+  remanejado para o novo projeto de notas fiscais, nós também perderíamos a informação acerca da existência do projeto de cadastro 
+  de clientes - essa é a anomalia de alteração.
+  O problema que origina essas anomalias é o fato de a informação do projeto estar toda dentro da tabela de funcionários, que não é 
+  o lugar dela. Se tivermos duas tabelas relacionadas (1-para-N) - funcionários e projetos - as anomalias desaparecem.
+  Anomalias também têm relação com o conceito de integridade referencial.
+  
+- Primeira forma normal (1NF): Não devem existir atributos multivalorados. 
+  1. Possui somente valores atômicos
+  2. Não há grupos de atributos repetidos (há apenas um dado por coluna nas linhas)
+  3. Existe chave primária
+  4. Cada tabela ou relação deve conter um único assunto
+  Nesta regra tratamos entao os atributos multivalorados, atributos compostos e tabelas aninhadas.
+  Uma relação só pode ser chamada de tabela se estiver na 1FN
+  
+- Segunda forma normal (2FN) : Ocorre quando um atributo depende apenas de uma parte de uma chave primária composta.
+  Os atributos que tiverem depenência parcial devem ser incluídos em uma outra tabela.
+  
+- Terceira forma normal (3FN): Ocorre quando um atributo, além de depender da chave primária de uma tabela, depende de outro atributo
+  ou conjunto de atributos
+  Se o atributo A depende do atributo B e ambos não são chave (dependência transitiva), criamos uma nova tabela com esses atributos 
+  com B sendo PK.	 
+
+- Sistema Analitico é aquele capaz de manipular, organizar e analisar um grande volume de dados sob multiplas perspectivas.
+
+- Datawarehouse (armazém de dados corporativo): ambiente OLAP modelado e disponível para toda organização. Dados consolidados de 
+  várias fontes. Informação histórica, de 2 a 10 anos, depois com a mudança da economia, mudança da própria organização, das 
+  tendências de mercado a informação se torna obsoleta. Otimizado para consulta (operações de inclusão e consulta. Em casos 
+  excepcionais se faz exclusão e alteração). Desnormalizado: não íntegro e redundante. Modelo Dimensional.
+
+- Datamart (armazém de dados departamental): ambiente OLAP modelado e disponível para departamentos. Ex: Vendas, Marketing, 
+  Financeiro, etc.
+  
+- Em geral uma modelagem dimensional está atrelada as seguintes perguntas: dimensão quando - obrigatoria (ex data da compra), 
+  dimensao quem (ex vendedor, cliente), dimensao como (ex a vista, revenda, internet), dimensao o que (ex produto), dimensao onde 
+  (ex filial, cidade, estado).  
+  
+- Camada Semantica: Camada que serve de interface entre a base de origem, familiar aos administradores e desenvolvedores dessa
+  base, e entre os analistas de negócios familiarizados com termos do negócio propriamente dito. Essa camada converte o termo
+  técnico da base de origem para os termos de negócio do dia a dia dos analistas.
+
+- SAP IDT (Information Design Tool): Ferramenta para desenvolvimento de camada semântica. Pode ser plugada em bases OLTP e OLAP.  
+  
+- Fato é o dado central, é o TEMA que se quer analisar, é o assunto. Ex: vendas, bugs, faturas, produção, viagens, contas a pagar e impostos.
+
+- Dimensoes são os diversos pontos de vista que se quer analisar o fato. A dimensao de tempo é obrigatoria.
+
+- Dimensao compartilhada é aquela relacionada a mais de um fato.
+
+- Dimensao mascarada é aquela que pode ser um atributo na fato ja que seus valores nao mudam (ex sexo).
+
+- Dimensao degenerada é aquela que deriva da fato. Nao tem sua propria tabela de dimensao. Usada quando precisamos ter o mesmo grão
+  do sistema transacional. Ex numero de nota, numero de pedido.
+  
+- Dimensao junk ou lixo é aquela que tem atributos do tipo sim/nao, 0/1 ou Ativo/Inativo.  
+
+- Medida são os valores que serão analisados. Sao caracteristicas numericas (vendas, quantidades, desconto, percentuais, impostos, etc).
+  São atributos na fato. Podem envolver calculos complexos.
+  
+- Relatorio: Possuem informação detalhada, são estaticos e sem interatividade, são de carater operacional, tem finalidade de
+  conferencia, podem estar agrupados, podem conter elementos graficos e podem conter totalizadores.
+  
+- Drill Down: aumenta a granulidade ou nivel de detalhamento da informação.
+
+- Drill Up  : diminui a granulidade ou nivel de detalhamento da informação.  
+
+- ad hoc : significa para um fim específico.
+
+- Cubo: apresenta a informação de forma multidimensional. Um cubo representa um fato. Sao dinamicos, podemos olhar a informacao
+  de diferentes perspectivas. Permite aumentar ou diminuir a granulidade, aplicar filtro, agrupar. Possui dimensoes nos eixos 
+  horizontais e verticais e medidas ao centro. O MDX e a liguagem usada para consulta em cubos.
+  
+- Cubos são CAMADAS SEMÂNTICAS elaboradas a partir de modelagem dimensional no ambiente OLAP. Eles são as fontes de dados de 
+  origem para o usuários finais gerarem seus relatórios.    
+
+- Dashboard: É um painel visual com informação resumida. Utilizado pelos niveis operacional, tatico e estrategico. É interativo e 
+  oferece características de navegação. Não tem detalhes, mas fornece Tops e monitoramento atraves de metas e indicadores.  
+  
+- Edward Tufte (guru da visualização de dados) - Visual Display of Quantitative Information
+
+- Stephen Few - Information Dashboard Design: The Effective Visual Communication of Data
+
+- William Cleveland and Robert McGill - Graphical Perception: Theory, Experimentation an Application to The Development of
+  Graphical Methods.
+
+- Dicas diversas para visualização de dados:
+  1. Comparado a que? Ex vendas em relação ao concorrente, em relação ao mes anterior, etc
+  2. Bom ou ruim?
+  3. Metricas incorretas. Ex um dashboard visualizado por um executivo em londres com metricas em Real
+  4. Unico Tema. Ex Se são dados de pagamento entao somente dados relativos a isso
+  5. Tamanho e Resolução. Ex toda informação em uma unica tela. Nao podem ter barra de rolagem.
+  6. Tops. Ex produtos mais vendidos, melhores e piores, vendedores com maior desempenho, etc
+  7. Excesso ou falta de niveis.
+  8. Forma de organizar a informação: Localização, Alfabeticamente, Tempo, Categoria, Hierárquica.
+  9. Abuso ou uso incorreto de cores (pesquisar no google o efeito psicologico das cores nas pessoas)
+ 10. Areas de enfase: o cérebro da mais enfase as areas superior esquerda e central, depois para superior direita e inferior esquerda
+     e por fim inferior direita.
+ 11. Proporção. Nos graficos usar a proporção aurea. L = 1.6 * l.
+ 12. Evitar grafico de setores. 
+ 13. Evitar grafico 3D
+ 14. Cores nao ordenam valores. Escalas de cinza sim.
+ 15. Mostrar 20 numeros ou menos.
+ 16. Variar dados, nao design. Ex se aproveitar que o usuario se acostumou com a analise daquele elemento grafico.
+ 17. Graficos devem destacar dados, nada mais
+ 18. Evitar linhas de grade. Geram poluição visual.
+ 19. Conseguimos guardar de 3 a 9 informações visuais em nosso cérebro. Mais que isso se torna ineficiente.
+ 20. Considerar que 7% da população possui algum tipo de daltonismo
+     www.colorlab.wickline.org/colorblind/colorlab
+	 neste link voce pode selecionar o tipo de daltonismo e simular como a pessoa enxerga  
+  
+- ETL é a etapa mais difícil, longa e cara na construção de um DW.
+
+- ETL processamento:
+  1. batch: em intervalos (uma vez ao dia, uma vez ao mes, etc)
+  2. streaming: a medida em que é produzida
+
+- Latência: é o intervalo de tempo entre o dado ser produzido e a informção estar disponível para o usuario final.  
+
+- SCD (Slowly Change Dimension): processo em que identifica um update realizado em um registro no OLTP, atribui uma data fim
+  no registro correspondente no OLAP e insere um novo registro com as mificações e data fim em aberto. As ferramentas ETL,
+  normalmente possuem componentes que automatizam essa tarefa. A desvantagem é que perdem muito em performance. O recomendado,
+  é tratar diretamente com combinações de querys. Trata da dimensões que mudam com pouca frequencia.
+  
+- CDC (Change Data Capture): processo nativo de alguns data bases OLTP que alimentam continuamente tabelas, apenas com registros
+  que sofreram modificações em alguns de seus campos. Com esse mecanismo não há necessidade de se ler a tabela original INTEIRA e 
+  comparar INTEIRAMENTE com uma tabela de destino em um processo ETL para determinar quais registros sofreram alteração.
+  
+- Ferramentas de scheduler: executam uma sequencia programada de jobs, informando o status da execução e tratando eventuais erros.
+  Ex Control-M.
+  
+- Roadmap é uma espécie de "mapa" que visa organizar as metas de desenvolvimento de um software.
+
+- Landscape é um mapa de produtos e tecnologias utilizadas para formar a solução. 
+
+- On-Premise: localmente no servidor da organização.
+
+- A arquitetura 64 bits é mais veloz do que a 32 bits. Outro detalhe é que a 32 bits só consegue utilizar no maximo 4Gb de RAM,
+  mesmo que tenha mais instalada na máquina.
+
+- Variaveis de ambibente informam basicamente onde estão os programas.
+
+- NÃO EXISTE A MELHOR FERRAMENTA, EXISTE A FERRAMENTA QUE RESOLVE O PROBLEMA DO CLIENTE!
+
+- O Linux é dividido em 2 partes: o Kernel, que é a camada nucleo do SO responsável por conectar os programas ao hardware e a camada de aplicativos (distribuições Linux).
+  Raramente utilizamos um sistema operacional diretamente. O que usamos são programas, que utilizam recursos como arquivos, internet e memória, ambos providos pelo sistema operacional.
+  Quando você usa o Internet Explorer e o Word, ambos pedem aos componentes internos do Windows, que é o verdadeiro sistema. 
+  A melhor forma de pensar em Sistema Operacional é imaginar um conjunto de vários programas unidos, aguardando serem usados. Com essa definição em mente podemos dizer que 
+  distribuições Linux como Slackware, Debian, Ubuntu, RedHat e Fedora são um aglomerado de programas e configurações específicas. São sabores diferentes do Linux.
+  Há vantagens e desvantagens em cada uma delas. 
+  www.kernel.org
+  www.distrowatch.com   
+  A distro Debian é uma das mais antigas, estavel e rebusta. A distro Ubuntu é desenvolvida a partir da distro Debian. Para estudar
+  uma distro Server, comece com o CentOS, pois é uma cópia da distro RedHat, utilizada pela grande parte das organizações.
+
+- API : Application Programming Interface. Conjunto de rotinas e padrões estabelecidos por um software para a utilização das suas 
+        funcionalidades por aplicativos que não pretendem envolver-se em detalhes da implementação do software, mas apenas usar seus serviços.  
+- CSV : Comma Separated Values (https://blog.geekhunter.com.br/xml-vs-json-entenda-como-fazer-a-melhor-escolha/)
+- JSON : Java Script Object Notation
+- XML : Extensible Markup Language
+- PDF : Portable Document Format. É um formato de arquivo, desenvolvido pela Adobe Systems em 1993, para representar documentos de maneira independente do aplicativo, 
+                                  do hardware e do sistema operacional usados para criá-los.
+- Web Service : É uma solução utilizada na integração de sistemas e na comunicação entre aplicações diferentes. 
+                Com esta tecnologia é possível que novas aplicações possam interagir com aquelas que já existem e que sistemas desenvolvidos em 
+				plataformas diferentes sejam compatíveis. Os Web Services são componentes que permitem às aplicações enviar e receber dados. 
+				Cada aplicação pode ter a sua própria "linguagem", que é traduzida para uma linguagem universal, um formato intermediário como XML, Json, CSV, etc.
+- SOAP : Simple Object Access Protocol, em português Protocolo Simples de Acesso a Objetos. É um protocolo para troca de informações estruturadas em uma plataforma 
+         descentralizada e distribuída. Ele se baseia na Linguagem de Marcação Extensível (XML) para seu formato de mensagem, e normalmente baseia-se em 
+		 outros protocolos da camada de aplicação, mais notavelmente em chamada de procedimento remoto (RPC) e Protocolo de transferência de hipertexto (HTTP), 
+		 para negociação e transmissão de mensagens.
+- REST : Representational State Transfer, em português Transferência Representacional de Estado. É um estilo de arquitetura de software que define um conjunto de 
+         restrições a serem usados para a criação de web services (serviços Web).
+- HTML : Hypertext Markup Language. É uma linguagem de marcação utilizada na construção de páginas na Web.
+- ODBC : Open Database Connectivity. É um padrão para acesso a sistemas gerenciadores de bancos de dados (SGBD).
+- JDBC : Java Database Connectivity. É um conjunto de classes e interfaces (API) escritas em Java que fazem o envio de instruções SQL para qualquer banco de dados relacional.
+- SSH : Secure Shell é um protocolo de rede criptográfico para operação de serviços de rede de forma segura sobre uma rede insegura. O melhor exemplo de aplicação conhecido é 
+        para login remoto de usuários a sistemas de computadores.
+		O SSH foi projetado como um substituto para o Telnet e para protocolos de shell remotos inseguros como os protocolos Berkeley rlogin, rsh e rexec. Estes protocolos enviam 
+		informações, notavelmente senhas, em texto puro, tornando-os suscetíveis à interceptação e divulgação usando análise de pacotes. A criptografia usada pelo SSH objetiva 
+		fornecer confidencialidade e integridade de dados sobre uma rede insegura, como a Internet, apesar dos arquivos vazados por Edward Snowden indicarem que a Agência de 
+		Segurança Nacional pode algumas vezes descriptografar o SSH, permitindo-os ler o conteúdo de sessões SSH.
+- POSIX : Portable Operating System Interface ou Interface Portável entre Sistemas Operativos. É uma família de normas definidas pelo IEEE para a manutenção de compatibilidade 
+          entre sistemas operacionais. Tem como objetivo garantir a portabilidade do código-fonte de um programa a partir de um sistema operacional que atenda às normas POSIX 
+		  para outro sistema POSIX, desta forma as regras atuam como um interface entre sistemas operacionais distintos, enfim, de modo coloquial "programar somente uma vez, 
+		  com implementação em qualquer sistema operacional".
+- CAD : Computação de Alto Desempenho
+- GPU : Graphics Processing Unit. É tipo de microprocessador especializado em processar gráficos em computadores pessoais, estações de trabalho ou videogames. GPUs modernas manipulam 
+        gráficos computadorizados com eficiência e sua estrutura de processamento paralelo os tornam mais capazes neste tipo de trabalho que CPUs normais.
+- Heartbeat : sinal de vida.
+- Porta : É um software de aplicação específica ou processo específico servindo de ponto final de comunicações em um sistema operacional hospedeiro de um computador. 
+          Uma porta tem associação com o endereço de IP do hospedeiro, assim como o tipo de protocolo usado para comunicação. O propósito das portas é para singularmente identificar 
+		  aplicações e processos de um único computador e assim possibilitá-los a compartilhar uma única conexão física com uma rede de comutação de pacotes, como a internet.
+		  Os protocolos que usam principalmente portas são os protocolos da camada de transporte, tais como o Protocolo de controle de transmissão (TCP) e User Datagram Protocol (UDP) 
+		  do conjunto de protocolos da internet. A porta é identificada por um protocolo, com um número de 16 bits, vulgarmente conhecido como port number(número de porta). 
+		  O port number é adicionado a um endereço de IP do computador, completando o endereço de destino para uma sessão de comunicação. Isto é, os pacotes de dados são encaminhados 
+		  através da rede para um endereço de IP de destino especifico, e em seguida, ao atingir o computador de destino, são encaminhados para o processo especifico ligado ao 
+		  número de porta de destino.
+		  Numerosos programas TCP/IP podem ser executados simultaneamente na Internet (pode, por exemplo, abrir vários navegadores simultaneamente ou navegar em páginas HTML 
+		  descarregando ao mesmo tempo um ficheiro por FTP). Cada um destes programas trabalha com um protocolo, contudo o computador deve poder distinguir as diferentes fontes de 
+		  dados.
+		  Assim, para facilitar este processo, cada uma destas aplicações recebe um endereço único na máquina, codificada em 16 bits: uma porta (a combinação endereço IP + porta é 
+		  então um endereço único no mundo, chamado socket).
+		  O endereço IP serve então para identificar de maneira única um computador na rede enquanto o número de porta indica a aplicação à qual os dados se destinam. Desta maneira, 
+		  quando o computador recebe informações destinadas a uma porta, os dados são enviados para a aplicação correspondente. Se se tratar de um pedido destinado à aplicação, 
+		  esta chama-se aplicação servidor. Se se tratar de uma resposta, fala-se então de aplicação cliente.
+		  No windows o comando: netstat -ano | findstr <PID> , permite verificar a porta que foi habilitada por um determinado programa ou processo.
+		  
+- Pipeline : É um processo composto pelas operações de ingestão, processamento, armazenamento, acesso e visualização de dados.
+             É a linha de montagem da analise do dado.
+
+- Daemon : Disk And Execution Monitor
+
+- Throughput : Em redes de comunicação, como Ethernet ou packet radio, throughput, throughput de rede ou simplesmente taxa de transferência é a quantidade de dados transferidos 
+               de um lugar a outro, ou a quantidade de dados processados em um determinado espaço de tempo. Pode-se usar o termo throughput para referir-se a quantidade de 
+			   dados transferidos em discos rígidos ou em uma rede, por exemplo; tendo como unidades básicas de medidas o Kbps, o Mbps e o Gbps.
+               O throughput pode ser traduzido como a taxa de transferência efetiva de um sistema. A taxa de transferência efetiva de um determinado sistema 
+			   (uma rede de roteadores por exemplo) pode ser menor que a taxa de entrada devido às perdas e atrasos no sistema.
+			   
+- Framework : Basicamente, é um template com diversas funções que podem ser usadas pelo desenvolvedor. Com ele, é desnecessário gastar tempo para reproduzir a mesma função 
+              em diferentes projetos, auxiliando em um gerenciamento ágil de projetos. Em outras palavras, ele é uma estrutura base, uma plataforma de desenvolvimento, 
+			  como uma espécie de arcabouço. Uma boa comparação é a da caixa de ferramentas, só que, em vez de chaves de fenda e martelos, há bases para formulários de login, 
+			  validação de campos e conexão com bancos de dados.
+			  As funções do framework têm uma grande variedade de parâmetros, garantindo ao desenvolvedor a possibilidade de fazer personalizações, de acordo com as necessidades do projeto. 
+			  Para isso, são usados princípios de orientação a objeto, como a abstração, o polimorfismo e a herança.
+
+- ASF : Apache Software Foundation. Fundação sem fins lucrativos, que é uma comunidade global de desenvolvedores de softwares e outros colaboradores.
+
+- https://hadoopecosystemtable.github.io/
+
+- https://www.cloudera.com/tutorials.html
+
+- Jupyter : Em 2014, Fernando Pérez, criou um subproduto do projeto IPython que chamou de projeto Jupyter. Jupyter Notebook é um ambiente computacional web, interativo para criação 
+            de  documentos “Jupyter Notebooks”. O documento é um documento JSON com um esquema e contém uma lista ordenada de células que podem conter código, texto, fórmulas 
+			matemáticas, plotagens e imagens. A extensão dos notebooks é “.ipynb”
+			Os documentos Jupyter Notebooks podem ser convertidos em outros formatos como HTML, slides, Latex, PDF, Python, etc. Estas conversões podem ocorrer através da interface 
+			Web (via “Download As”) ou via o comando em linha de programa jupyter nbconvert.
+			O nome Jupyter é um acrônimo criado a partir das linguagens de programação que inicialmente foram aceitas pelo Projeto Jupyter: Julia, Python e R. Além dessas, hoje, 
+			o Projeto Jupyter suporta também C++, Ruby, Fortran e outras.			
+			  
+- HDFS : Hadoop Distributed File System. Sistema de arquivos distribuidos do Hadoop. Baseado no GFS (Google Distributed File System).
+         Otimizado para alto throughtput e que funciona melhor na leitura e escrita de grande arquivos (Gigabytes para cima). 
+		 Os dados no HDFS podem estar ou não estruturados. Dentre as características do HDFS estão a escalabilidade e disponibilidade, graças a replicação de dados e 
+		 tolerância à falhas. O HDFS replica os arquivos, um número configurado de vezes, e é tolerante à falhas, tanto em hardware quanto em software.
+		 Trabalha sob o modelo WORM (write-once-read_many). O uso deste modelo permite que le não dependa de forte controle de simultaneidade, simplifica a persistência
+		 dos dados e habilita o acesso de alto rendimento.
+         O HDFS segue a arquitetura master-slave. Seus dois componentes principais são:
+         Namenode: Tem como responsabilidade, gerenciar os arquivos armazenados no HDFS. Suas funções incluem mapear a localização, realizar a divisão dos arquivos em blocos, 
+		           encaminhar os blocos aos nós escravos, obter os metadados dos arquivos e controlar a localização de suas réplicas. Como o NameNode é constantemente acessado 
+				   por questões de desempenho, ele mantém todas as suas informações em memória. Ele tem um computador dedicado que executa apenas o NameNode, pois ele armazena 
+				   os metadados na memória. Se o computador que executa o NameNode falhar, os metadados para o cluster inteiro serão perdidos, portanto, esse computador geralmente 
+				   é mais robusto do que os outros no cluster. É  ele quem contém as informações de em quais nós ao longo do cluster, estão cada segmento de arquivo salvo no HDFS, 
+				   bem como os diretórios existentes e suas permissões de acesso. 
+
+	     SecondaryNameNode: Utilizado para auxiliar o NameNode a manter seu serviço. Sua função é realizar pontos de checagem (checkpointing) do NameNode em intervalos pré-definidos, 
+		                    de modo a garantir sua recuperação e atenuar o seu tempo de reinicialização. É responsável por sincronizar os arquivos EditLogs com a imagem do FsImage, 
+							para gerar um novo FsImage mais atualizado. Essa atividade é executada pelo SecondaryNameNode de forma agendada, definindo-se um intervalo de tempo em 
+							segundos  no  arquivo core-site.xml. Também pode ser disparada, sempre que o total de edições atingir um limite de tamanho em bytes, predeterminado no 
+							arquivo de configuração. O fato de o SecondaryNameNode ter que carregar todo o FsImage em memória, mais as edições para combiná-los  em  um  novo  fsimage, 
+							acarreta em um consumo elevado de RAM. Por este motivo, ele foi projetado para executar como um processo separado do NameNode, evitando que essas atividades 
+							pudessem comprometer o desempenho do NameNode. Em clusters grandes, é altamente recomendado manter o SecondaryNameNode em uma máquina exclusiva. 
+                            Resumindo: É o processo responsável por ler constantemente todos os sistemas de arquivos e metadados da RAM do NameNode, e o grava no disco rígido ou no 
+							sistema de arquivos ; É o responsável por combinar o EditLogs com FsImage do NameNode; Baixa os EditLogs do NameNode em intervalos regulares e aplica-se à FsImage;
+							O novo FsImage é copiado de volta para o NameNode, que é usado sempre que o NameNode for iniciado da próxima vez.
+							Existem 2 arquivos associados aos metadados: o FsImage e o EditLog; 
+							- O FsImage é uma imagem do sistema de arquivos que inicia no Namenode
+							- O EditLog armazena uma série de modificações feitas no sistema de arquivos, após o Namenode iniciar seu trabalho.
+							O  endereçamento  dos  dados  que  se encontram  em cada nó ao longo do cluster, é mantido em um arquivo do NameNode chamado FsImage. Por motivos de 
+							desempenho, quando o HDFS é iniciado, as informações do FsImage são carregadas para a memória do NameNode, evitando a necessidade de se realizar leitura 
+							de arquivo em disco, sempre que tiver que tratar requisições de clientes. 
+                            Conforme o estado do HDFS vai sendo alterado (novos arquivos vão sendo inseridos, outros removidos, diretórios são alterados, arquivos têm dados 
+							acrescentados, nós inteiros são removidos ou adicionados ao  cluster),  as  informações  sobre  que  nó  contém quais  blocos  também  vai  sendo  
+							atualizada  na  memória do NameNode, deixando o FsImage desatualizado. Para que essa diferença entre a memória do NameNode e o FsImage não seja perdida 
+							para sempre no caso de um desligamento, o estado do NameNode  é  sempre  mantido  também  em  arquivos  temporários, chamados EditLogs 
+							(simplesmente escrever cada nova  operação  concorrente  em  um  novo  arquivo,  é  menos custoso do que tentar sincronizar toda vez o mesmo arquivo).
+                            Com o passar do tempo, o número de arquivos EditLog  pode  se  tornar  grande  demais,  tornando-se necessária uma atualização do fsimage. 
+							Essa é a função do SecondaryNameNode.
+
+							
+		 Datanode: Enquanto o NameNode gerencia os blocos de arquivos, são os DataNodes que efetivamente realizam o armazenamento dos dados. Como o HDFS é um sistema de arquivo 
+		           distribuído, é comum a existência de diversas instâncias do DataNode em uma aplicação Hadoop, para que eles possam distribuir os blocos de arquivos em diversas 
+				   máquinas. Um DataNode poderá armazenar múltiplos blocos, inclusive de diferentes arquivos. Além de armazenar, eles precisam se reportar constantemente ao NameNode, 
+				   informando quais blocos estão guardando, bem como todas as alterações realizadas localmente nesses blocos.
+				   
+		Desenvolvedores Hadoop geralmente testam seus scripts e o código em um ambiente pseudodistribuído (configuração de um único nó) - uma VM que executa todos os deamons do Hadoop
+		simultaneamente em uma única máquina.
+
+- YARN : Yet Another Resource Negotiator. Trata-se de uma plataforma de gerenciamento de recursos, responsável pelo gerenciamento dos recursos computacionais em cluster, 
+         assim como pelo agendamento dos recursos. É um orquestrador de Jobs no Hadoop.
+		 
+- MapReduce : Modelo de programação para processamento em larga escala. A arquitetura do MapReduce é semelhante ao do HDFS, master-slave. No MapReduce os componentes são:
+              JobTracker: Ele recebe o job MapReduce e programa as tarefas map e reduce para execução, coordenando as atividades nos TaskTrackers.
+			  TaskTracker: Componente responsável por executar as tarefas de map e reduce, e informar o progresso das atividades.
+			  >> Map - Extrai algo que voce espera de cada registro
+			  >> Shuffle an Sort - Embaralha e ordena os registros
+			  >> Reduce - Agrega, sumariza, filtra ou transforma os dados
+			  Objetivo - Facilitar a distribuição das tarefas e execução em paralelo entre os nodes de um cluster Hadoop.
+			  Motivações - Facilitar o desenvolvimento e execução de aplicações utilizando processamento paralelo; Processar um volume massivo de dados utilizando uma
+			               infraestrutura de hardware commodity.
+			  Pseudo Codigo:
+				def map(key, value):
+					#Efetua processamento
+					return (intermed_key, intermed_value)
+					
+				def reduce(intermed_key, values):
+					#Efetua processamento
+					return (key, output)
+			  A versão atual do Hadoop MapReduce é um framework de software para compor jobs que processem grandes quantidades de dados em paralelo em um cluster, e é o framework
+			  de processamento distribuído nativo que acompanha o Hadoop. Os JOBS são COMPILADOS e EMPACOTADOS em um JAR, que é submetido ao ResourceManager pelo cliente do job - 
+			  geralmente por meio da linha de comando. O ResourceManager então escalona e monitora as tarefas, além de oferecer um status de volta ao cliente.
+			  Em geral, uma aplicação MapReduce é composta de três classes Java: um Job, um Mapper e um Reducer. Os mapeadores e redutores lidam com os detalhes do processamento
+			  dos pares chave/valor e estão conectados por meio de uma fase de embaralhamento e ordenação (shuffle and sort). O Job configura o formato de dados de entrada e de
+			  saída, especificando as classes de dados InputFormat e OutputFormat serializadas do HDFS e para ele. Todas essas classes devem estender classes-base abstratas ou
+			  implementar interfaces de Mapreduce. Nem é preciso dizer que desenvolver uma aplicação MapReduce em Java é uma tarefa extensa.
+			  
+			  No Mapreduce em Java, é passado um único registro para o stdin de cada vez, que é o que a API MapReduce oferece. No entanto, com o Streaming, o mapper tem acesso a 
+			  todas as linhas do bloco e pode tratar o conjunto de dados completo como um único item. De modo análogo, o reducer não recebe valores acumulados como na API Java, mas
+			  uma entrada ORDENADA linha a linha do mapeador. Como cada mapeador e redutor é tratado como EXECUTÁVEL pelo Hadoop Streaming, todo arquivo Python deve começar com
+			  #!/usr/bin/env python, que alerta o shell de que o código deve ser interpretado usando Python em vez de bash.
+			  
+- Hadoop Streaming : Para os cientistas de dados é o mais interessante para uso. É um utilitario escrito em Java, empacotado como um Jar, que permite a especificação de qualquer 
+                     executável como mapeador e redutor. É uma ferramenta importante, que permite aos cientistas de dados que queiram programar em R ou em Python(em vez de Java)
+                     começar a usar imediatamente o Hadoop e MapReduce. Apesar do surgimento do Spark, Jobs em lotes, particularmente aqueles que serão executados com
+                     frequência, operações de ETL ou outros processos de transformação e limpeza, são mais adequados para MapReduce.				 
+			  
+- Ambari : console de gerenciamento do cluster Hadoop, desenvolvido pela Hortonworks. Para facilitar todo o aprendizado, a Hortonworks oferece uma imagem Virtualbox pronta, 
+           na qual você só precisa baixar e subir uma máquina virtual. Com isso, você já estará com ambiente Hadoop pronto para começar a usar. Além disso, a Hortonworks 
+		   oferece uma boa variedade de tutoriais, com problemas reais que podem ser resolvidos via Hadoop.
+		   
+- Apache ZooKeeper : ZooKeeper é um serviço de coordenação distribuída para gerenciar grandes conjuntos de clusters. A arquitetura de um sistema distribuído não é simples 
+                     de se administrar. Existem problemas de concorrência, “deadlock”, consistência, etc. Estes problemas são mais fáceis de gerenciar com o  Apache Zoopkeeper.
+
+- Apache Ranger : É uma estrutura para habilitar, monitorar e gerenciar uma segurança abrangente de dados na plataforma Hadoop.
+					 
+- Pig : O Apache Pig permite que os usuários do Apache Hadoop escrevam transformações MapReduce complexas, usando uma linguagem de script simples chamada Pig Latin. 
+		O Pig traduz o script Pig Latin para MapReduce, a fim de que ele possa ser executado dentro do YARN para acessar um único conjunto de dados armazenado no sistema de 
+		arquivos distribuídos Hadoop (HDFS);
+
+- Avro : É uma estrutura de serialização de dados e chamada de procedimento remoto orientada a linhas, desenvolvida no projeto Hadoop do Apache. Ele usa JSON para definir tipos 
+         e protocolos de dados e serializa dados em um formato binário compacto. Seu uso principal é no Apache Hadoop , onde ele pode fornecer um formato de serialização para 
+		 dados persistentes e um formato de conexão para comunicação entre nós do Hadoop e de programas clientes aos serviços do Hadoop. O Avro usa um esquema para estruturar 
+		 os dados que estão sendo codificados. Possui dois tipos diferentes de linguagens de esquema; um para edição humana (Avro IDL) e outro que é mais legível por máquina com 
+		 base em (JSON).
+
+- HBase: Banco noSql orientado a colunas. Formas de acesso: HBase shell, Java API, Python, Scala, REST Service, Avro service.
+		
+- Hive : O HIVE é um componente de Data Warehousing que executa leitura, escrita e gerenciamento de grandes conjuntos de dados em um ambiente distribuído, usando a interface SQL. 
+	     O Hive se integra facilmente com outras tecnologias críticas do centro de dados, usando uma interface familiar JDBC.
+		 Provê uma interface para o Hadoop. É uma "ponte" para o Hadoop e pessoas que não querem trabalhar com Programação Orientada à Objetos em Java. 
+		 Executa acima da camada (HDFS, MapReduce, Yarn). HiveQL: Hive Query Language (similar ao SQL – select, group by, join).
+		 Hive expõe os arquivos no HDFS em forma de tabelas para o usuário. O Hive traduz a consulta para tarefas MapReduce e as executa no Hadoop (O Hive abstrai os detalhes por 
+		 trás das tarefas MapReduce).
+		 
+- TEZ : Permitir que projetos como o Apache Hive e o Apache Pig executem um DAG complexo de tarefas, o Tez pode ser usado para processar dados, que anteriormente executavam várias 
+        tarefas de Mapreduce, agora em uma única tarefa do Tez. Atualmente, ele é construído sobre o Apache Hadoop YARN.
+
+- Sqoop : Sql_To_Hadoop. Utilizado para importar e exportar dados do HDFS para bancos relacionais e vice-versa.
+
+- Flume : Serviço para coleta, agregação e transporte de grandes quantidades de dados de log para o HDFS. Foi criado especificamente para a ingestão de dados para o HDFS,
+          permite algumas transformações no processo de ingestão como a agregação de dados. O Flume é indicado não apenas na ingestão de dados de logs, mas para qualquer
+		  fluxo de dados geradoem timeseries e grandes quantidades como informações de redes sociais.
+
+- Spark : Apache Spark é uma ferramenta Big Data para o processamento de grandes conjuntos de dados. Foi desenvolvido para substituir o MapReduce, pois processa 100x mais rápido 
+         que ele, realizando suas operações em memória; O Spark pode ser usado como uma alternativa em relação ao MapReduce, aproveitando o Yarn e HDFS do Hadoop;
+		 O PySpark possui um shell semelhante ao shell do Python. O Pyspark permite o uso de funções Python, dicionários, listas, etc;
+		 O Spark é escrito na linguagem Scala e executa em uma máquina virtual Java. Atualmente, suporta as seguintes linguagens para o desenvolvimento de aplicativos: 
+		 Scala, Java, Python, Clojure e R.
+		RDDs -  Resilient Distributed Datasets ou Conjuntos de dados distribuídos resilientes é o conceito central do framework Spark. Imagine o RDD como uma tabela do banco de dados, 
+		que pode guardar qualquer tipo de dado. O Spark armazena os dados do RDD em diferentes partições. Isso ajuda a reorganização computacional e a otimização no processamento dos dados. 	
+        Para conseguir coordenação e tolerância a falhas, o MapReduce utiliza um modelo de execução de extração de dados que exige escritas intermediárias de volta no HDFS. Infelizmente,
+		a entrada/saída (E/S) resultante da transferência dos dados do local em que estão armazenados para o lugar em que devem ser processados representa o maoir custo de tempo em
+		qualquer sistema de computação; como resultado, embora seja extremamente seguro e resiliente, o MapReduce também é lento por tarefa. Pior ainda, quase todas as aplicações
+		precisam encadear vários jobs de MapReduce em muitos passos, criando um fluxo de dados em direção ao resultado final desejado. Isso resulta em quantidades enormes de dados
+		intermediários escritos no HDFS, que não são necessários ao usuário, gerando custos adicionais no que diz respeito ao uso de disco. Com Spark os dados são armazenados em
+		memória enquanto são processados, eliminando assim as escritas intermediárias custosas em disco. Como o Spark implementa muitas aplicações já conhecidas dos cientistas de dados
+		(por exemplo, DataFrames, notebooks interativos e SQL) é desejável, pelo menos inicialmente, o Spark seja o método principal de interação com o cluster para os usuários a quem
+		o Hadoop seja uma novidade.
+		
+		
+- Oozie : Apache Oozie é uma aplicação Web Java, usada para agendar tarefas no Apache Hadoop. Para isso, o Oozie combina vários trabalhos sequencialmente em uma unidade 
+         lógica de trabalho. É integrado com a pilha Hadoop, oferecendo suporte Apache MapReduce, Apache Pig, Apache Hive e Apache Sqoop. Ele trabalha com codigo Java e XML.
+		 Alternativamente usa-se o Airflow, quen conta com uma comunidade 20x maior e com codificação Python.
+
+- Solr : O Apache Solr é a plataforma open source para pesquisas de dados armazenados em HDFS. O Solr alimenta os recursos de busca e navegação dos maiores sites da Internet, 
+        permitindo uma pesquisa poderosa de texto completo e indexação quase em tempo real.
+
+- NiFi : É um projeto de software da Apache Software Foundation projetado para automatizar o fluxo de dados entre sistemas de software. É baseado no software " NiagaraFiles ", 
+         desenvolvido anteriormente pela NSA , que também é a fonte de uma parte de seu nome atual - NiFi . Foi de código aberto como parte do programa de transferência de 
+		 tecnologia da NSA em 2014.
+		
+- Apache Storm : O Apache Storm adiciona recursos confiáveis de processamento de dados em tempo real ao Enterprise Hadoop. O Storm no YARN é poderoso para cenários que exigem 
+                 análise em tempo real, aprendizado de máquina e monitoramento contínuo de operações.
+				 
+- Kafka : Kafka trabalha em combinação com Apache Storm, Apache HBase e Apache Spark para análise em tempo real e renderização de dados de transmissão. 
+          Kafka pode enviar dados geoespaciais de mensagens de uma frota de caminhões de longa distância ou dados de sensores de equipamentos de aquecimento e refrigeração 
+		  em edifícios de escritórios.
+		  
+- Spark Mlib : A MLlib é a biblioteca de aprendizagem de máquinas da Spark, com foco em algoritmos e utilidades de aprendizado, incluindo classificação, regressão, agrupamento, 
+               filtragem colaborativa, redução de dimensionalidade, bem como primitivas de otimização subjacentes.
+
+- Julia : É uma linguagem de programação dinâmica de alto nível projetada para atender os requisitos da computação de alto desempenho numérico e científico, sendo também eficaz 
+          para a programação de propósito geral. Julia é escrito em C, C++, e Scheme, usando a estrutura do compilador LLVM, enquanto a maior parte da biblioteca padrão de Julia 
+		  é implementada na própria Julia.
+		  
+- Data wrangling : As vezes chamada de data munging, é o processo de transformar e mapear dados de um formulário de dados " bruto " para outro formato com a intenção de 
+                  torná-lo mais apropriado e valioso para uma variedade de finalidades a jusante, como análises. Um organizador de dados é uma pessoa que executa essas 
+				  operações de transformação.
+				  
+				  
+- Data Lake : Data Lake é um termo novo, criado por James Dixon, Chief Technical Officer do Pentaho, para caracterizar um componente importante em Big Data. 
+              A ideia do Data Lake é ser um único repositório dentro de uma organização. Assim, todos os dados brutos estarão disponíveis a qualquer pessoa que precise 
+			  fazer análise sobre eles. Geralmente, usa-se o Hadoop para trabalhar com o Data Lake, mas o conceito vai além disso. Os Data Lakes armazenam os dados em seu 
+			  formato bruto, sem qualquer processamento e sem governança. O Data Lake é um conceito e não uma tecnologia! São necessárias diversas tecnologias para criar um Data Lake. 
+			  O Data Lake na verdade, é uma estratégia de armazenamento de dados, projetados para o consumo de dados. O consumo de dados é o processo que envolve a coleta, 
+			  importação e processamento de dados para armazenamento ou uso posterior. 
+			  Uma crítica muito comum ao Data Lake, é que ele seja apenas uma "lixeira" para dados de qualidade muito variável. A crítica embora faça sentido é irrelevante, 
+			  pois os cientistas de dados conhecem bem os problemas relacionados a qualidade de dados e existem técnicas estatísticas sofisticadas para lidar com este tipo de problema. 
+			  É importante destacar que o Data Lake levanta questões sobre segurança e privacidade, e por isso se faz necessário restrições a grupos de pessoas que possam usá-lo. 
+			  Há ainda quem acredite que o Data Lake seja apenas um Data Warehouse repaginado. O mais importante do Data Lake é garantir que nenhum dado será perdido e estará 
+			  sempre a disposição dos analistas e cientistas de dados. Lembre-se: um Data Warehouse só armazena os dados que foram modelados, isto é, estruturados.
+			  Isso pode incluir ainda munging , visualização de dados , agregação de dados, a formação de um modelo estatístico , bem como muitos outros usos potenciais. 
+			  Munging de dados como um processo geralmente segue um conjunto de etapas gerais que começam com a extração dos dados em uma forma bruta da fonte de dados, 
+			  "munging" os dados brutos usando algoritmos (por exemplo, classificação) ou analisando os dados em estruturas de dados predefinidas e, finalmente, 
+			  depositar o conteúdo resultante em um coletor de dados para armazenamento e uso futuro.
+
+
+Data Analytics (DA) : É a ciência de examinar dados brutos, com o objetivo de encontrar padrões e tirar conclusões sobre essa informação, aplicando um processo algorítmico 
+					  ou manual para obter informações. Em outras palavras, Data Analytics é a prática de coletar dados sem tratamento de fontes relevantes para os temas de 
+					  interesse da empresa e analisá-los de acordo com os objetivos, que pode ir desde realizar predições ou de tornar mais claro o panorama de atuação da empresa, 
+					  até avaliar novas possibilidades de atuação junto ao cliente e descobrir novas tendências de mercado.
+					  O DA permite atuações tão variadas, porque não é uma tecnologia ou um processo específico de uma área, mas sim uma prática de obtenção de informação 
+					  de qualidade para fins gerenciais ou operacionais, por isso é amplamente utilizável por praticamente qualquer departamento ou empresa. 
+					  O analista de dados conhece o seu conjunto de dados e sabe pelo que está buscando, ou seja, o ambiente a ser verificado e analisado já é predefinido. 
+					  As perguntas a serem respondidas já são conhecidas, o que facilita o trabalho do analista. Se a busca é por uma informação (quantitativa ou qualitativa) 
+					  específica ou pela verificação de algum tipo de dado ou de hipótese, então o DA provavelmente será a melhor saída. 
+					  Habilidade de um analista de dados: Programação, Visualização de Dados, Geração de Relatórios, Experiêncial com SQL, Trabalho em equipe. 
+					  Ferramentas usadas: R, Python, MatLab, Excel, SAS, Google Analytics, Adobe Campaign, etc.
+
+
+- Seek Time : Tempo de Busca é o tempo gasto para um controlador de disco rígido localizar uma parte específica dos dados armazenados. Quando qualquer coisa é lida ou gravada em 
+              uma unidade de disco, a cabeça de leitura / gravação do disco precisa se mover para a posição correta. O posicionamento físico real da cabeça de leitura / gravação 
+			  do disco é chamado de busca. A quantidade de tempo que leva a cabeça de leitura / gravação do disco para passar de uma parte do disco para outra é chamada de tempo 
+			  de busca.
+
+- Transfer Rate : Taxa de Transferencia é a quantidade de tempo que leva para os dados serem lidos ou gravados.
+
+- Machine Learning : Aprendizagem de Máquina é a prática de usar algoritmos para coletar dados, aprender com eles e então fazer predições sobre algo. Ao invés de implementar as 
+                     rotinas de software manualmente, com um conjunto específico de instruções para completar uma determinada tarefa. Em outras palavras, a máquina é “ensinada” 
+					 por meio de uma grande quantidade de dados e suporte de algoritmos, que dão a ela a habilidade de aprender. Algoritmos de Machine Learning são projetados 
+					 para melhorar ao longo do tempo quando expostos a novos dados.
+					 Tipos:  Aprendizado supervisionado;  Aprendizado não supervisionado;  Aprendizado por reforço.
+					 Aprendizado supervisionado: São apresentadas à máquina, exemplos de entradas e saídas desejadas, fornecidas por um "professor". O objetivo é aprender uma 
+					                             regra geral que mapeia as entradas para as saídas. Problemas de aprendizagem supervisionada são classificados em problemas de 
+												 “regressão” e “classificação”. Exemplo: Regressão: Dada uma imagem de homem/mulher, temos de prever sua idade com base em dados 
+												                                                    da imagem;
+																						 Classificação: Dada um exemplo de tumor cancerígeno, temos de prever se ele é benigno 
+																						                ou maligno através do seu tamanho e idade do paciente.
+												  Redes Neurais Artificiais;  Árvores de Decisão;  Random Forest (Floresta Aleatória);  Máquinas de Vetor de Suporte (SVMs);
+												  Naive Bayes; K-Nearest Neighbors (KNN);
+					 Saiba desde cedo, qual é o tipo de problema Saiba desde cedo, qual é o tipo de problema que você quer resolver com Machine Learning.
+
+
+					  
+- Engenheiro de Dados deve ser capaz de criar meios que transformem a massa de dados em formatos analisáveis pelo Cientista de Dados. 
+  Esse meio é conhecido na área de Big Data como pipeline. O pipeline é um processo composto pelas operações de ingestão, processamento, armazenamento e acesso de dados.
+
+- Produto de Dados : São combinações de dados e algoritmos estatísticos usados para inferência ou previsão que geram valor e também usam os dados gerados como input para 
+                     um novo aprendizado e nova inferência.
+
+- Permissões Linux
+-rw-r--r-- 1 dio dio    0 jul 26 14:23  diolinux
+drwxr-xr-x 2 dio dio 4096 jul 26 14:23 'pasta secreta'
+
+Inicia com d é um diretorio
+Inicia com - é um arquivo
+0 1   2   3 
+- --- --- ---
+0 - Informa se é diretorio ou arquivo
+1 - Informa as permissões do dono ou proprietario
+2 - Informa as permissões do grupos
+3 - Informa as permissões dos outros
+
+Valores permitidos : (r) leitura = 4 ; (w) escrita = 2 ; (x) execução = 1
+
+rwx = 4+2+1 = 7
+rw  = 4+2+0 = 6
+ wx = 0+2+1 = 3
+r x = 4+0+1 = 1
+
+chmod: Chamado de "change mode", serve para mudar as permissões de um arquivo ou diretório.
+chown: Chamado de "change owner", serve para mudar o dono de um arquivo ou diretório.
+
+chmod -R 777 nome_da_pasta (o parametro -R acrescenta a permissão recursivamente a todas a subpastas)
+chmod +x 'eu uso linux' (o +x acrescenta permissão de execução para dono, grupo e outros)
+chmod -x 'eu uso linux' (o +x tira permissão de execução para dono, grupo e outros)
+sudo chown <dono>:<grupo> <pasta>
+
+- sudo : super user do (fazer como super usuário). O comando sudo do sistema operacional Unix permite a usuários comuns obter privilégios
+         de outro usuário, em geral o super usuário, para executar tarefas específicas dentro do sistema de maneira segura e controlável pelo administrador.
+		 Um super usuário precisa definir no arquivo /etc/sudoers quais usuários podem executar sudo, em quais computadores podem fazê-lo e quais comandos 
+		 podem executar através dele. Por ser uma tarefa delicada em termos de segurança a edição direta deste arquivo não é recomendada. 
+		 Para isso foi criada a ferramenta denominada visudo que invoca um editor para uma cópia do arquivo /etc/sudoers e em seguida verifica o conteúdo do 
+		 arquivo antes de substituir a configuração atual.
+		 Caso sudo seja executado de forma não permitida pela configuração, um registro da ocorrência é feito no arquivo /var/log/auth.log.
+		 
+- su - : troca o usuario. Com o - apos o su carregamos as variaveis de ambiente associadas aquele usuario que estamos trocando.
+
+- stdin : STandarD INput, ou Entrada Padrão.
+- stdout : STandarD OUTput, ou Saída Padrão.
+- stderr : STandarD ERRor, ou Erro Padrão.
+– Pipe ( | ) : Liga o stdout de um programa ao stdin de outro.
+– Write ( > ) : Redireciona o stdout para outro local (um arquivo, por exemplo).
+– Append ( >> ) : Anexa o stdout para outro local (um arquivo, por exemplo). Repare que há uma pequena diferença entre o “>” e o “>>”: o primeiro apaga o 
+                                                                             conteúdo do destino, para então escrever seus dados; o segundo apenas acrescenta 
+																			 as informações às já existentes.
+
+                      
+Tipos de Drivers
+Tipo 1: Ponte JDBC-ODBC
+É o tipo mais simples mas restrito à plataforma Windows. Utiliza CBDO para conectar-se com o banco de dados, 
+convertendo métodos JDBC em chamadas às funções do ODBC. Esta ponte é normalmente usada quando não há um driver puro-Java (tipo 4) 
+para determinado banco de dados, pois seu uso é desencorajado devido à dependência de plataforma.
+
+Tipo 2: Driver API-Nativo
+O driver API-Nativo traduz as chamadas JDBC para as chamadas da API cliente do banco de dados usado. Como a Ponte JDBC-ODBC, 
+pode precisar de software extra instalado na máquina cliente.
+
+Tipo 3: Driver Nativo
+Traduz a chamada JDBC para um protocolo de rede independente do banco de dados utilizado, que é traduzido para o 
+protocolo do banco de dados por um servidor. Por utilizar um protocolo independente, pode conectar as aplicações clientes Java 
+a vários bancos de dados diferentes. É o modelo mais flexível e pode ser visto como um driver intermediário, pois também atua como Middleware. 
+É mais utilizado para banco de dados antigos como estatais de governos.
+
+Tipo 4: Driver de Protocolo de Rede
+Converte as chamadas JDBC diretamente no protocolo do banco de dados utilizado. Implementado em Java, normalmente é independente de plataforma 
+e escrito pelos próprios desenvolvedores. É o tipo mais recomendado para ser usado.
+ 
+############## MBA #############
+RGM: 18863451
+S  : fermi@321
+ 
+###### QUALIDADE DE DADOS ######
+
+- Qualidade de dados é importante porque sem ela mandamos produtos e correspondências para os endereços errados, ou para o endereço 
+  certo só que a pessoa certa não está mais lá, ou mandamos a coisa errada para a pessoa errada (nossa, isso é pior ainda!), ou 
+  no caso dos contact centers, entramos em contato com um número de telefone discado por uma máquina e uma vez atendida a linha, 
+  passa-se para um operador que cobra você de uma dívida ou quer falar com fulano de tal para cobrar uma dívida e nem uma coisa nem 
+  a outra é com você... Desgaste, palavras rudes, mal falação, etc., porque os dados para fazerem o processo automatizado fluir 
+  estavam desatualizados, errados na origem, gravados no lugar errado, misturados, por fim, sem qualidade.
+  Isso acontece recorrentemente e envolve além do desgaste das pessoas um rio de dinheiro jogado no lixo pelas empresas em geral.
+  Normalmente, essa má qualidade foi adquirida pela organização ao longo de anos e anos de descuido, e de puxadinhos de sistemas e de 
+  bancos de dados migrados ou incorporados sem dicionários de dados, sem estudo de modelagem, sem arquitetura, sem limpeza e de 
+  duplicação de dados, entre outros, feitos por DBAs iniciantes ou por programadores que não consolidaram as bases e chumbaram no 
+  código as regras que deveriam estar nos bancos e que uma vez fora deles e disseminadas por uma infinidade de programas, haverá sua 
+  atualização em uns e não em outros componentes do sistema, o que provocará em muitos momentos a entrada de dados errada e 
+  consequentemente a inutilidade desses dados.
+  Talvez o pior de tudo, decisões são feitas com dados ruins. Isso pode levar a sérios problemas de negócios na linha.
+  Os processos automatizados param ou não podem ser implementados. A automação de processos exige absolutamente dados limpos e 
+  consistentes. Se os dados se tornarem inconsistentes, podem quebrar os processos.
+  Os fluxos de trabalho do processo são quebrados ou são direcionados incorretamente porque os dados subjacentes estão incorretos.
+  Exemplo de problema: fiz uma venda que demandou desenvolvimento de um sitema, demandou um sistema de logistica, demandou campanha
+  de marketing, demandou estudo de cliente e resultou em uma entrega de um produto errado para uma pessoa errada. Isso tudo por
+  ter uma base com "baixa" qualidade de dados.
+
+- Por isso que existe um monte de empresas querendo usar BI, Big Data e DataWarehouse e ir além com algoritmos ultrassofisticados de 
+  machine learning e análise inteligente de comportamento de consumidor, etc. Mas não funciona, ou se funciona, é em uma pequena parte. 
+  A raiz dessa resposta errada, dessa má solução, está no tijolo fundamental do conhecimento, o DADO. 
+
+- A qualidade do dado esta relacionada a sua finalidade de uso. Em cada organização é definido um valor aceitável de problemas no processo
+  ou geração incorreta de informação devido a problemas no dado. Estando dentro desse valor aceitável o dado é tido como tendo qualidade.
+
+- A forma como os dados são inseridos, armazenados e gerenciados afeta a QD.
+
+- Qualidade de dados é muito complexo e difícil de se atingir se não houver rigor em todas suas fases. Vai desde a definição bem feita 
+  dos dados e suas regras, passa pela estruturação e modelagem, até a aplicação correta para geração, manutenção, integração e expurgo. 
+  Se uma destas fases é falha, os dados estão comprometidos e a eficácia esperada não são refletidas nos resultados. 
+  
+- Qualidade de entrada de dados significa saída de dados com qualidade. Em última análise, geração de riqueza.  
+
+- A garantia da QD é o processo de verificação da confiabilidade e eficácia dos dados.
+
+- Mantemos a QD atraves do processos de Atualização, Padronização, Deduplicação e Limpeza.
+
+- Replexos da má qualidade:
+  1. Data Analytics ineficaz
+  2. BI ineficaz (decisões tomadas baseadas em uma mentira)
+  3. Big Data ineficaz
+  4. Data Mining comprometido
+  5. Dado inacurado
+  6. Impossível usar o dado para machine learning
+  
+- Uma pobre qualidade da informação tem um forte impacto na efetividade geral de uma organização
+
+- Problemas de Qualidade da Informação vão muito além de valores incorretos. Podem também incluir problemas e erros de produção, 
+  problemas técnicos com armazenamento e acesso a dados, e aqueles causados pelas mudanças das necessidades informacionais dos consumidores  
+
+- Deduplicação: Refere-se a uma técnica para eliminar dados redundantes em um conjunto de dados. No processo de deduplicação, 
+  são removidas cópias extras dos mesmos dados, deixando apenas uma cópia para ser armazenada.
+  Reduzir a quantidade de dados para transmitir através da rede pode economizar dinheiro significativo em termos de custos de armazenamento 
+  e velocidade de backup - em alguns casos, economias de até 90%.
+  
+- Dados Mestre ou Master Data é o conjunto dos dados cruciais para qualquer negócio, armazenados em diferentes sistemas e utilizados em vários 
+  setores da sua organização. São aqueles dados consolidados, que sofrem nenhuma ou pouquíssima alteração em função do tempo e que melhor 
+  descrevem uma corporação.  
+  
+- Dados mestres fazem referência aos dados cadastrais, eles correspondem a um set de atributos para uma ou outra característica específica.
+
+- Dados ao longo de seu ciclo de vida: Criação, Armazenamento inicial, Obsolecencia, Exclusao
+
+- Dados mais recentes e os acessados com frequência, são armazenados em mídias mais rápidas porém mais caras.
+
+- Dados menos criticos, mídias mais baratas porem mais lentas.
+
+- Organizações enfrentam conformidade de dados com a lei Sarbanes-Oxley. Esta é a lei relacionada a QD.
+
+- Apesar do consenso geral da importância da qualidade de dados, em muitas organizações ainda não se percebe que a falta de qualidade de dados
+  é um dos principais causadores de perda de tempo, dinheiro e oportunidades dentro dos negócios. Mesmo dentre as organizações que têm essa cultura,
+  em muitas delas ainda não existe uma metodologia consolidada e aplicada para garantir a melhoria contínua da qualidade de dados. O insucesso de
+  muitas investidas empresariais tem sido causado por decisões estratégicas erradas, baseadas em dados organizacionais de baixa qualidade.
+  
+- http://datasus.saude.gov.br/ Portal de acesso a base de dados com informaçoes da area de saude. Qual a QD dessa base? 
+
+- A importância de informações de qualidade indica a necessidade de que se institua no Brasil uma política de gerenciamento dos dados dos 
+  sistemas de informação em saúde.
+
+- Uma informação de qualidade é aquela apta/conveniente para o uso, em termos da necessidade do usuário.
+
+- Problemas de QD: Erros, Anomalias, Sujidade, Falta de valores de atributos, Valores de atributos incorretos, Diferentes representações dos
+  mesmos dados.
+  
+- O usuario de sistema nao é burro, acontece que ele tem pressa, ele se adapta ao sistema até o momento que o sistema vira uma barreira para ele terminar
+  de fazer o serviço dele, então ele vai dar um jeito de burlar isso daí, e não é necessariamente por mal, já que pessoas de TI também tem muito serviço e
+  são muito ocupadas, portando de dificil acesso, então o usuario vai fazendo o que ele pode para concluir sua tarefa.
+
+- Uma analogia é que a QD é como um cancer, que voce não vigia e surge lentamente e quando vai ver está matando a organização com muitos prejuízos.
+
+- Contextos onde temos problemas de QD:
+  1. Quando se quer corrigir anomalias em uma unica fonte de dados, como arquivos e bancos de dados
+  2. Quando dados não são estruturados ou são migrados para dados estruturados
+  3. Quando se quer integrar dados provenientes de várias fontes em uma única nova fonte de dados.
+  
+- Atributos para medir a QD:
+  1. Precisão - 
+  2. Completude
+  3. Atualizar dados
+  4. Relevância
+  5. Consistência entre fontes de dados
+  6. Confiabilidade
+  7. Apresentação apropriada
+  8. Acessibilidade
+
+- Problemas no nivel de registro: Valores faltantes, Violação de sintaxe, Valores incorretos, Violação de dominio, Violação de restrição de dominio de
+  negocio.
+
+- Problemas no nivel de processos: São mais susceptiveis de causarem problemas em QD. Processos que recebem dados de fora e alimentam o BD (conversao,
+  consolidação, entrada manual, arquivos em lote, interfaces em tempo real), processos que causam o envelhecimento do dado (mudanças não programadas e 
+  não controladas, atualização de sistemas sem os devidos testes, novos usos para os mesmos dados, perda de pessoas ou expertise e automação de
+  processos que não é controlada e nem testada) e processos que mudam os dados (mudam o dado no sistema, limpeza do dado e exclusão do dado). 
+  
+- Normalmente os processos existem em cima de 3 camadas. Banco de dados, Regras de Negocios e Interface. Os problemas surgem por exemplo quando se muda 
+  uma regra de negocio e não se faz o ajuste nas outras camadas (aplicação/alteração de constraints, manutenção da interface)  
+  
+- Melhorando a QD de suas base de dados voces estara melhorando a qualidade das decisões que a empresa toma.  
+  
+- Dimensoes de QD: conjunto de adjetivos ou caracteristicas que a maioria dos consumidores de dados reage de uma forma bastante coerente.  
+  1. Credibilidade
+  2. Valor acrescentado - agregam valor as suas operacoes, beneficios que os consumidores obterao a partir dos proprios dados, vantagem competitiva
+  3. Relevancia - Aplicavel, interessante, util
+  4. Precisão - possuem integridade, confiaveis, livres de falha, erros podem ser facilmente identificados
+  5. Interpetrabilidade - São compreensiveis e uteis para o consumidor de dados
+  6. Facilidade de entendimento
+  7. Acessibilidade
+  8. Objetividade - Imparcial, sem uma segunda intenção.
+  9. Atualidade - Idade do dado
+  10. Completude - A profundidade das informações contidas no dado.
+  11. Rastreabilidade
+  12. Reputação
+  13. Consistencia Representacional - Apresentados continuamente no mesmo formato
+  14. Custo-Eficacia - o custo da coleta de dados, da precisao, enfim, custo beneficios
+  15. Facilidade de operação - facilmente atualizavel, carregado, descarregado, manipulaveis, varios propositos, integrados, personalizavel, reproduzido
+  16. Variedade de dados e fontes de dados
+  17. Consisão - Bem apresentados, organizados, formatados
+  18. Seguranca de Acesso - são de natureza proprietaria
+  19. Quantidade de dados apropriada
+  20. Flexibilidade - Adaptavel, extensivel, expasivel
+  
+- Dimensoes mais trabalhadas e aceitas: Precisão, Integralidade, Unicidade, Atualidade, Validade, Consistencia
+
+- Qualidade de Dados depende: O que é solicitado e como, Como é inserido, O que é editado e quando, Como os dados são revistos, Armazenados e usados.
+
+- Em cada interação com o Dado existe a chance de diminuirmos sua qualidade. É afetada por praticamente todas as partes do processo comercial.
+
+- Cinco praticas de gestao de dados
+  1. Avaliação da qualidade de dados
+  2. Medições da qualidade de dados
+  3. Integração da qualidade de dados as aplicações de infraestrutura
+  4. Melhoria da qualidade de dados organizacionais
+  5. Gerenciamento de incidentes em qualidade de dados
+
+- Medição de qualidade de dados: analistas de QD, sintetizam a avaliação de resultados, foco em elementos de dados criticos, base nas necessidades dos
+  usuarios, definição de metricas de desmpenho, alimenta os relatorios de scorecards de qualidade de dados.
+
+- Data Quality Assesment
+  1. Quantificar lacuna de valor
+  2. Pode determinar a velocidade de qualquer melhoria de qualidade de dados propostos
+  3. Viabilidade
+  4. Efetividade de custos
+  5. Impactos das falhas de dados  no ambito do negocio
+  6. Criterio para medir e priorizar  problemas emergentes dos dados  
+  
+- Possiveis problemas relacionados a dados: Aumento dos custos, Reduzem as receitas, Margens de contribuicao, Ineficiencias ou atrasos nas atividades
+  comerciais.
+
+- Data Profiling: Este processo realiza uma revisao de baixo para cima dos dados reais como uma maneira de isolar aparentes anomalias que podem ser
+  falhas de dados reais. É uma das tecnologias mais eficazes para melhorar a precisão dos dados nos bancos de dados corporativos. 
+
+- Tipos de analise:
+  1. Completude - frequencia com que um atributo é preenchido ao invez de branco ou nulo
+  2. Singularidade - Quantos são valores unicos, quantos sao duplicados e se deveria haver.
+  3. Distribuicao de valores
+  4. Alcance - valores maximo, minimo e medio de um determinado atributo
+  5. Padroes - distribuicao de registros em um formato especifico
+
+- Roteiro inicial:  Data Profiling, Dimensões de qualidade de dados, Plano de ação e Laudo.
+
+
+###### FORMAÇÃO CIENTISTA DE DADOS ######
+
+- O cientista de dados usa tecnicas para gerar valor a partir de dados. Usa alguma tecnica de analise para extrair informação dos dados.
+  A Ciência dos Dados é sobre a solução de problemas, não a construção de modelos. Isso significa que, se você pode resolver uma
+  necessidade do cliente com apenas uma consulta SQL, faça isso! Não seja focado apenas em modelos complexos de aprendizagem de
+  máquina: seja simples, seja útil. O cientista de dados é como um garimpeiro, faz diariamente a escavação e garimpo em um conjunto
+  grande de dados em busca de insigths empresariais que ninguem havia pensado em procurar. Ele pode adquirir massas de dados de diversas 
+  fontes e então limpar, tratar, organizar e preparar os dados; e, em seguida, explorar as suas habilidades em Matemática, Estatística e 
+  Machine Learning para descobrir insights ocultos de negócios e gerar inteligência.
+  
+- ... mas acredito que a comunicação efetiva com colegas de equipe e parceiros de negócios é uma característica definidora 
+  de um ótimo Cientista de Dados.
+ 
+- Voce pode ser qualquer coisa, desde que voce esteja disposto a ser.
+
+- Nós conduzimos análises estatísticas usando os melhores dados, metodologias e recursos à nossa disposição. 
+  A abordagem não é como uma soma ou uma longa divisão, na qual a técnica correta produz a resposta “certa” e um computador 
+  é sempre mais preciso e menos falível que um humano. A análise estatística é mais como um bom trabalho de detetive 
+  (daí o potencial comercial de CSI: análise de regressão). Gente inteligente e honesta com frequência discorda sobre 
+  o que os dados estão tentando nos dizer.
+
+- R é uma linguagem para analise de dados.
+  Pacotes são extensoes do R que qualquer um pode produzir.
+  As execuçoes sao feitas em memoria. Existem pacotes (ff) para lidar com grandes volumes de dados.
+
+- O Apache Hadoop é uma plataforma de software de código aberto para o armazenamento e processamento distribuído de grandes conjuntos de dados, 
+  utilizando clusters de computadores com hardware commodity. Os serviços do Hadoop fornecem armazenamento, processamento, acesso, governança, 
+  segurança e operações de Dados.
+  Apache Hadoop é um framework gratuito, baseado em linguagem de programaçao Java, que suporta o processamento de grandes conjuntos de 
+  dados em ambientes de computaçao distribuida (atraves de diversos computadores simultaneamente).
+  Hadoop Distributed File System (HDFS): Sistema de arquivos para leitura de dados em alta velocidade
+  Hadoop Yarn: gerenciador de recursos e agendador de jobs
+  Hadoop MapReduce: sistema para processamento paralelo para grande volume de dados
+  Hadoop tem um baixo custo, nao apenas por ser livre, mas por permitir o uso de hardware simples, computadores de baixo custo agrupados em cluster.
+  
+- Apache Spark é um engine rapido e de uso geral para processamento de dados em larga escala. É significamente mais veloz que o MapReduce.
+  Utiliza o Hadoop (HDFS) como base, mas pode ser usado com Casandra, HBase e MongoDB. Pode ser usado tambem com linguagens Python, R e Scala.
+  Sua velocidade de execuçao pode ser ate 100x mais rapido que o Hadoop MapReduce em memoria e 10x em disco. Combina SQL Streaming e analise
+  complexa, alem do uso de ferramentas de alto nivel como Spark SQL, MLlib para Machine Learning, GraphX e Spark Streaming. Integraçao com
+  com Haddop, executa sobre o Yarn cluster manager e permite leitura e escrita de dados no HDFS. Em pouco tempo, Apache Spark tem se tornado
+  o mecanismo de processmento de Big Data para a proxima geraçao e esta sendo aplicado em todo mercado de dados mais rapido do que nunca.
+  
+- Data size: < 1 TB (Spark) || > 1 TB (Hadoop/Spark)  
+
+- Liguagem Python pode ser usada para coletar, organizar e analisar dados, além de usar os principais algoritmos de Machine Learning.
+
+- Streaming: fluxo continuo de dados.  
+
+- O SAP HANA, edição Express, foi projetado para ser executado em ambientes com restrição de recursos e contém um amplo conjunto de recursos 
+  para o desenvolvedor.
+
+- A Estatística (ou ciência Estatística) é um conjunto de técnicas e métodos de pesquisa que entre outros tópicos envolve 
+  o planejamento do experimento a ser realizado, a coleta qualificada dos dados, a inferência, o processamento, a análise 
+  e a disseminação das informações.
+  
+- Qual é o objetivo de aprender estatística?
+  * Sintetizar enormes quantidades de dados.
+  * Tomar decisões melhores.
+  * Responder a questões sociais importantes.
+  * Reconhecer padrões capazes de refinar o modo como fazemos tudo, desde vender fraldas até capturar criminosos.
+  * Pegar trapaceiros e processar criminosos.
+  * Avaliar a efetividade de políticas, programas, drogas, procedimentos médicos e outras inovações.
+  * E identificar os canalhas que usam essas mesmas ferramentas poderosas para fins nefastos.
+  Se você puder fazer tudo isso vestindo um terno Hugo Boss ou uma saia preta curtinha, talvez você possa também ser a próxima estrela ou astro de CSI: análise de regressão. 
+
+- ... matemático e escritor sueco Andrejs Dunkels: é fácil mentir com estatística, mas é difícil dizer a verdade sem ela.  
+
+- Toda conclusão estatística apresentada deve realmente ser questionada.
+  
+- Descritiva: organiza, demonstra e resume os dados. São os números e cálculos que usamos para sintetizar dados brutos.
+- Probabilidade: analisa situações sujeitas ao acaso
+- Inferencia: obtem respostas sobre um fenomeno com dados representativos
+
+- Mesmo a estatística descritiva mais precisa e acurada pode sofrer de um problema mais fundamental: 
+  uma falta de clareza sobre o que exatamente está se tentando definir, descrever ou explicar. 
+  Argumentos estatísticos têm muito em comum com casamentos ruins; os litigantes muitas vezes falam passando um por cima do outro.
+
+- Variaveis quntitativas (discretas e continuas) e qualitativas (nominais e ordinais)
+
+- Um ponto importante no estudo da estatistica é que ela nao é uma ciencia que funciona como um processo que voce imputa dados,
+  executa uma formula e obtem uma resposta pronta. Depende da interpretação de quem está fazendo o experimento, de escolhas e os
+  resultados dependem de avaliacao.
+  
+- Amostra é parte de uma população, selecionada usando alguma tecnica que dê chances iguais a todos os elementos da população de 
+  serem selecionados. Se isso não aconteceu dizemos que ela é enviesada. Toda amostra tem uma margem de erro e um nivel de confiança.
+  Amostras diferentes podem representar resultados diferentes. Podemos "medir" a variação esperada. Com relaçao ao Custo/Beneficio,
+  É preciso analisar toda a população? As vezes com uma proporçao menor voce consegue obter os mesmos resultados. Em aprendizado de 
+  maquina, mesmo que voce tenha 100% da populaçao, voce precisa usar alguma tecnica de amostragem para separar os dados para
+  teste/treino/validaçao.
+  
+- Tipos de amostras:
+	1. Aleatoria Simples - Um determinado número de elementos é retirado da população de forma aleatória.
+						   Todos os elementos da população alvo do processo de amostragem, devem ter as mesmas chances de serem 
+						   selecionados para fazer parte da amostra.
+	2. Estratificada - E dividida em estratos, ou caracteristicas comuns, raça, religiao, escolaridade, localidade, etc
+	3. Sistematica - E escolhido um elemento aleatorio (indexidado) e a partir dai a cada N elementos um novo elemento é escolhido.
+	                 Geralmente é usado quando não se sabe o numero total de elementos da população.
+	4. Por Unidade Monetaria - ?
+	
+- Acurácia é a medida da consistência geral de um número com a verdade
+
+- Tanto a mediana como a média são medidas do “meio” de uma distribuição, ou sua “tendência central”.
+
+- A característica definidora da mediana – que ela não pesa observações com base na distância que elas se situam do ponto médio, 
+  apenas se estão acima ou abaixo – acaba revelando-se seu ponto fraco. Em contraste, a média é afetada pela dispersão. 
+  Do ponto de vista da acurácia, a questão mediana versus média gira em torno de se os valores extremos numa distribuição distorcem 
+  o que está sendo descrito ou são, ao contrário, parte importante da mensagem. (Mais uma vez, o julgamento triunfa sobre a matemática.) 
+  É claro que nada indica se você deve escolher a mediana ou a média. Qualquer análise estatística abrangente provavelmente apresentaria 
+  as duas. Quando aparece apenas a média ou a mediana, pode ser apenas por uma questão de brevidade – 
+  ou pode ser porque alguém está tentando “persuadir” com estatística.
+  
+- Má conduta estatística tem muito pouco a ver com matemática malfeita. Cálculos impressionantes, quando muito, 
+  podem obscurecer motivos nefastos. O fato de você ter calculado corretamente a média não altera o fato de que a mediana é um 
+  indicador mais acurado. Boa capacidade de julgamento e integridade acabam se revelando surpreendentemente importantes. 
+  Um conhecimento detalhado de estatística não detém transgressões mais do que um conhecimento detalhado das leis impede um 
+  comportamento criminoso. Tanto com a estatística quanto com o crime, os bandidos muitas vezes sabem exatamente o que estão fazendo!
+  
+- A correlação mede o grau em que dois fenômenos estão relacionados entre si. Por exemplo, existe uma correlação entre temperaturas de 
+  verão e venda de sorvete. Quando uma sobe, a outra sobe também. Duas variáveis têm correlação positiva se uma variação numa delas é 
+  associada a uma variação da outra no mesmo sentido, tal como a relação entre altura e peso. Pessoas mais altas pesam mais (em média); 
+  pessoas mais baixas pesam menos. Uma correlação é negativa se uma variação positiva numa das variáveis está associada a uma variação 
+  negativa na outra, tal como a relação entre exercício e peso. O aspecto traiçoeiro nesses tipos de associações é que nem toda observação 
+  se encaixa no padrão. Às vezes pessoas mais baixas pesam mais que pessoas mais altas. Às vezes pessoas que não se exercitam são mais magras 
+  que pessoas que se exercitam o tempo todo. Ainda assim, existe uma relação significativa entre altura e peso, bem como entre exercício e peso.
+
+- O poder da correlação como ferramenta estatística é que podemos encapsular uma associação entre duas variáveis numa única estatística descritiva: 
+  o coeficiente de correlação.
+  
+- O coeficiente de correlação tem duas características fabulosamente atraentes. A primeira, por razões matemáticas que foram relegadas ao apêndice, 
+  trata-se de um número único que varia de –1 a 1. Uma correlação de 1, muitas vezes descrita como correlação perfeita, significa que qualquer 
+  alteração em uma das variáveis está associada com uma alteração equivalente na outra variável no mesmo sentido.
+  Uma correlação de –1, ou correlação negativa perfeita, significa que toda alteração em uma variável está associada a uma alteração equivalente 
+  na outra variável em sentido oposto.
+  Quanto mais perto de 1 ou –1 estiver a correlação, mais forte a associação. 
+  Uma correlação de 0 (ou próxima a 0) significa que as variáveis não têm associação significativa entre si, como a relação entre o número 
+  do sapato e os resultados em exames escolares.
+  
+- A segunda característica atraente do coeficiente de correlação é que ele não está ligado a nenhuma unidade. 
+  Podemos calcular a correlação entre altura e peso – mesmo que a altura seja medida em centímetros e o peso em quilogramas. 
+  Podemos até calcular a correlação entre a quantidade de televisores que alunos do ensino médio têm em suas casas e seus resultados em exames escolares, 
+  e eu lhes asseguro que será positiva. (Falarei mais sobre essa relação daqui a pouco.) 
+  O coeficiente de correlação faz uma coisa aparentemente milagrosa: reduz uma complexa bagunça de dados medidos em unidades diferentes 
+  (como o nosso gráfico de dispersão de altura e peso) numa única e elegante estatística descritiva.
+  
+- Correlação não implica causalidade; uma associação positiva ou negativa entre duas variáveis não significa necessariamente que uma variação 
+  numa delas esteja causando a variação na outra.
+  
+- Por exemplo, anteriormente aludi a uma provável correlação positiva entre os resultados do SAT de um aluno e a quantidade de televisores que 
+  sua família possui. Isso não significa que pais superansiosos possam aumentar o placar dos testes de seus filhos comprando cinco aparelhos de 
+  televisão adicionais para a casa. E provavelmente tampouco significa que assistir muito à televisão seja bom para o desempenho acadêmico.
+  A explicação mais lógica para tal correlação seria que pais com elevado nível de educação podem se dar ao luxo de ter uma porção de aparelhos 
+  de televisão e tendem a ter filhos cujos resultados nos testes estão acima da média. Tanto televisores como resultados de testes são provavelmente 
+  causados por uma terceira variável, que é a educação dos pais.
+  
+- Algoritmo de recomendação da Netflix
+  http://www.netflixprize.com/assets/GrandPrize2009_BPC_PragmaticTheory.pdf
+  
+- PROBABILIDADE É o estudo de eventos e resultados envolvendo um elemento de incerteza. Investir no mercado de ações envolve incerteza. 
+  O mesmo ocorre com o lançamento de uma moeda, que pode dar cara ou coroa. Lançar uma moeda quatro vezes envolve níveis de incerteza adicionais, 
+  porque cada um dos quatro lançamentos pode resultar em cara ou coroa. Se você lança uma moeda quatro vezes seguidas, eu não posso saber o 
+  resultado antecipadamente com certeza (nem você). Todavia, você pode sim determinar de antemão que alguns resultados (duas caras, duas coroas) 
+  são mais prováveis que outros (quatro caras).
+  
+- Probabilidades não nos dizem o que acontecerá com certeza; dizem o que é provável de acontecer e o que é menos provável de acontecer.
+
+- A probabilidade de dois eventos independentes acontecerem ambos é o produto das respectivas probabilidades. Em outras palavras, a probabilidade 
+  de ocorrer o Evento A e ocorrer o Evento B é a probabilidade do Evento A multiplicada pela probabilidade do Evento B. Essa fórmula é aplicável 
+  apenas se os eventos forem independentes, o que significa que o resultado de um deles não tem nenhum efeito no resultado do outro. 
+  Por exemplo, a probabilidade de você tirar cara no primeiro lançamento não altera a probabilidade de você tirar cara no segundo. Por outro lado, 
+  a probabilidade de chover hoje não é independente de ter chovido ontem, uma vez que frentes de chuvas podem durar dias. De maneira semelhante, 
+  a probabilidade de você bater o carro hoje e bater o carro no ano que vem não são independentes. O que quer que tenha causado a colisão deste 
+  ano também pode provocar a colisão do ano que vem; você pode ter propensão a dirigir bêbado, gostar de correr, mandar mensagens de texto 
+  enquanto guia, ou simplesmente dirigir mal. (É por isso que o seguro do seu carro aumenta depois de um acidente; não é simplesmente porque a 
+  companhia quer recuperar o dinheiro que pagou pelo sinistro; não, ela agora tem uma nova informação sobre a sua probabilidade de bater no futuro, 
+  probabilidade esta que – depois que você atirou seu carro contra a porta da sua garagem – subiu.)
+  A probabilidade também possibilita calcular o que pode ser a ferramenta mais útil em toda tomada de decisão gerencial, particularmente em finanças: 
+  o valor esperado. O valor esperado leva a probabilidade básica um passo adiante. O valor esperado ou payoffg de algum evento, digamos, a compra de 
+  um bilhete de loteria, é a soma de todos os diferentes resultados, cada um pesado pela sua probabilidade e payoff.
+  Um teorema importante conhecido como lei dos grandes números nos diz que à medida que o número de tentativas aumenta, a média dos resultados 
+  vai se aproximando mais e mais do valor esperado. Sim, eu ganhei US$2 na loteria hoje. E posso ganhar US$2 de novo amanhã. Mas se eu comprar 
+  milhares de bilhetes de US$1, cada um com um retorno esperado de US$0,56, então torna-se uma quase certeza matemática que perderei dinheiro. 
+  Quando eu tiver gastado US$1 milhão em bilhetes, vou acabar com algo surpreendentemente próximo de US$560 mil. A lei dos grandes números explica 
+  por que os cassinos sempre ganham dinheiro no longo prazo. As probabilidades associadas a todos os jogos de cassino favorecem a casa 
+  (presumindo que o cassino consiga impedir que os jogadores de blackjack contem as cartas). A lição maior – e uma das lições centrais em finanças 
+  pessoais – é que você deve sempre fazer seguro contra uma contingência adversa que não pode se permitir enfrentar confortavelmente. 
+  E deve deixar de comprar seguro de tudo o mais. A árvore de decisão mapeia cada fonte de incerteza e as probabilidades associadas a todos os 
+  resultados possíveis.
+	
+	
+###### BIG DATA FUNDAMENTOS 2.0 ######
+
+- QUANTO MAIS FERRAMENTAS VOCE CONHECE, MAIS PROBLEMAS SERÁ CAPAZ DE RESOLVER!
+
+- Engenheiro de dados tem um perfil voltado para infraestrutura, para preparação e manutenção do ambiente de big data.
+
+- Cientista de dados tem um perfil voltado para programação e aplicação de tecnicas de analise.
+
+- A dica aqui é simples. Procure compreender a área de negócio na qual você pretende atuar como Cientista de Dados. 
+  Se vai trabalhar em uma mineradora por exemplo, quais são so principais indicadores? De onde vem os dados? 
+  Que problemas a empresa precisa resolver? Que tipos de dados devem ser analisados e correlacionados? 
+  Como técnicas de Machine Learning podem ser empregadas para melhorar o faturamento da empresa? 
+  Como a análise de dados permite oferecer um serviço melhor aos clientes? Cada área de negócio tem as suas particularidades 
+  e uma compreensão ampla disso, vai permitir um trabalho que realmente gere valor.
+
+- 80% dos dados de big data são não estruturados (não possuem definições de campos e relacionamentos). Com dados estruturados, voce sabe
+  exatamente a forma como os seus dados estão armazenados.
+
+- Muitas empresas não sabem que dados precisam ser analisados. Dados preciosos são decartados por falta de conhecimento ou ferramentas
+  de tratamento.
+  
+- Big Data é uma coleção de conjuntos de dados, grandes e complexos, que não podem ser processados por bancos de dados ou
+  aplicações de processamento tradicionais. Outra forma... conjunto de dados extremamente amplos e que, por este motivo, necessitam de 
+  ferramentas especialmente preparadas para lidar com grandes volumes, de forma que toda e qualquer informação nestes meios possam
+  ser encontrada, analisada e aproveitada em tempo hábil. No big data tem o componente velocidade, os dados gerados hoje precisam 
+  ser analisados rapidamente, sob o risco de perderem a utilidade. Algumas técnicas estatísticas existem a décadas, mas somente agora com o 
+  grande volume de dados, podem gerar resultados importantes, que em volumes menores, dificilmente seriam alcançados. Podemos descobrir
+  padrões e correlações nos dados que nos propiciem novas e valiosas ideias. Saber coletar, armazenar e analisar grandes conjuntos
+  de dados é o grande diferencial.
+  
+- Dados são transformados em informação, que precisa ser colocada em contexto para que possa fazer sentido.
+
+- Ciencia de dados é composta por técnicas de análise, que já existem a décadas, para obter insits e respostas dos dados em toda sua plenitude. 
+
+- O big data tem se tornado tão importante, porque surgiram tecnologias que permitem processar esta grande quantidade de dados de
+  forma eficiente e com baixo custo. Os dados podem ser analisados em seu formato nativo, seja ele estruturado, não estruturado ou
+  streaming (fluxo constante de dados). Dados podem ser capturados em tempo real. Dados podem ser transformados em insigths de
+  negócios. É possivel fazer modelagem preditiva para prever o futuro.
+
+- 4 V's: Volume (tamanho dos dados), Variedade (formato dos dados), Velocidade (geração dos dados) e Veracidade (confiabilidade dos dados).
+
+- Apache Haddop, principal framework de armazenamento e processamento de big data. Mas não é o unico!
+
+- Hadoop HDFS: software para gerenciar um cluster de discos para armazenamento (leitura e gravação).
+- Hadoop Yarn: gestão de todo processo de armazenamento e analise.
+- Hadoop MapReduce: softaware para gerenciar o processamento em um cluster.
+
+- Distro Hadoop: Amazon Web Services (AWS), Cloudera, Hortonworks, IBM, Intel, MapR Technologies, Microsoft, Pivotal Software, Teradata, etc.
+
+- Características do Hadoop: baixo custo (open source), mas requer profissionais muito qualificados para implementação e caros. Além disso,
+  as distros com suporte tem o custo de licença. É escalável, voce pode aumentar rapidamente sua infraestrutura. Tolerante a falhas.
+  Flexivel para criar diferentes arquiteturas. Portabilidade entre hardware e sistemas operacionais heterogêneos.
+ 
+- Cluster Hadoop possui pelo menos 2 nodes o Namenode(master), gerencia a estrutura do file system, os metadados de todos os arquivos e diretorios
+  dentro da estrutura e o Datanode(n's) que armazena e busca blocos de dados quando solicitado pelo cliente ou Namenode. Reporta periodicamente
+  para o Namenode com a lista de blocos que foram armazenados.
+
+- MapReduce é um modelo de programação para processamento e geração de grandes conjuntos de dados. Transforma o problema de análise em um processo
+  computacional que usa conjuntos de chaves e valores. Foi desenvolvido para tarefas que consomem minutos ou horas em computadores conectados em
+  rede de alta velocidade gerenciados por um unico cluster. Ele usa um tipo de análise de dados por força bruta. Todo o conjunto de dados é processado
+  em cada query. Usa um modelo de processamento em batch. O mapeamento-redução é criado pelo cientista de dados usando alguma linguagem, python, java,
+  scala, R, etc. Ele permite a execução de queries ad-hoc em todo o conjunto de dados em um tempo escalavel. O segredo da performance do MapReduce
+  está no balanceamento entre seeking e transfer: reduzir operações de seeking e usar de forma efetivas as operações de transfer.
+  
+- Seek time é o delay para encontrar um arquivo.
+- Transfer rate é a velocidade para encontrar um arquivo.
+- Tranfer rate é bem mais veloz que Seek time.
+
+- O MapReduce é bom para atualizar todo (ou a maior parte) de um grande conjunto de dados. RDBMS são otimos para atualizar pequenas porções de grandes
+  bancos de dados. Ele é muito efetivo para processar dados semi-estruturados e não-estruturados. Ele interpreta dados durante as sessões de 
+  processamento de dados. Ele não utiliza propriedades intrínsecas. Os parametros usados para selecionar os dados, são definidos pela pessoa que está
+  fazendo a análise.
+  
+- Apache Spark é um framework para processamento de big data. É significativamente mais veloz que o MapReduce. Utiliza o HDFS como base, mas pode ser
+  usado com Cassandra, HBase, MongoDB, etc. Com liguagens Python, Java, Scala e R. Pode ser até 100x mais rapido que MapReduce em memória e até 10x
+  mais rápido em disco.
+  
+- Algoritmos de machine learning são iterativos. Voce executa uma vez, depois executa novamento com o que ele aprendeu na primeira execução e assim
+  por diante.
+
+- Apache Spark só apresenta realmente seus benefícios quando executando sobre um cluster de computadores. Em uma unica maquina serve apenas para experimentar
+  e conhecer a ferramenta. Ele foi desenvolvido em linguagem scala.
+
+- Framework é um conjunto de softwares trabalhando em conjunto para entregar uma determinada soluçao.
+
+- Streaming de dados são dados que são gerados de maneira continua.
+
+- Batch é um grande volume de dados que é enviado para processamento ou armazenamento. 
+
+- Apache MapReduce não suporta processamento iterativo (machine learning) e streaming de dados.
+
+- Apache Storm é um componente do ecossistema Hadoop para streaming de dados. Feito em liguagem java. Um dos líderes em real-time analytcs.
+
+- Bancos de dados NoSQL armazenam dados nao estruturados. Bancos de dados relacionais nao possuem funcionalidades necessarias para
+  atender os requisitos do Big Data, dados gerados em grande volume, alta velocidade e variedade.
+  
+- 4 principais categorias de BD NoSQL:
+1. Graph Databases - geralmente é aderente a cenários de rede social online, onde os nós representam as entidades e os laços  representam
+   as interconexões entre eles.
+   Desta forma é possível atravessar o grafo seguindo as relações. Esta categoria  têm sido usada para lidar com problemas  relacionados a sistemas de 
+   recomendação e listas de controle de acesso, fazendo uso de sua capacidade de lidar com dados altamente interligados.
+   Pricipal representante: Neo4J
+
+2. Document Databases - permite o armazenamento de milhões de documentos.
+   Por exemplo, voce pode armazenar detalhes sobre um empregado, junto com o curriculo dele (como um documento) e então pesquisar sobre potenciais 
+   candidatos a uma vaga, usando um campo especifico, como telefone ou conhecimento especifico em uma tecnologia.
+   Pricipal representante: MongoDB
+
+3. Key-values stores - os dados são armazenados no formato key-value e os valores são identificados pelas chaves.
+   É possível armazenar bilhões de registros de forma eficiente e o processo de escrita é bem rápido. Os dados podem ser então pesquisados através 
+   das chaves associadas.
+   Pricipal representante: DynamonDB
+
+4. Column family stores - os dados são organizados em grupos de colunas e tanto o armazenamento, quanto as pesquisas de dados são baseados em chaves.
+   Principais representantes: HBase e Hypertable.
+  
+
+
+###### INTRODUCAO A CIENCIA DE DADOS 2.0 ######  
+
+- Decisoes baseadas em emocoes nao sao decisoes, sao instintos.
+
+- Ciencia de Dados é o processo para extrair informações valiosas a partir de dados. Envolve o seguinte conjunto de habilidades para isso:
+  estatistica, matematica, computacao e conhecimento de negocios alem de tecnicas e teorias como analise preditiva, modelagem, engenharia e/ou
+  mineracao de dados e visualizacao.
+	
+- Ciencia de Dados é a exploração e analise de todos os dados disponiveis, sejam eles estruturados ou nao, com o objetivo de desenvolver 
+  compreensao, extrair conhecimento e formular ações que gerem resultados.
+  
+- A principal questão é como tudo isso irá ajudar a resolver problemas de negocio. Se será usando a tecnologia X ou Y, a tecnica A ou B, isso é 
+  irrelevante para os tomadores de decisão.
+  
+- Linha de trabalho em geral:
+1.Identificar o problema da area de negocio
+2.Compreender o problema (entidades e atributos)
+3.Coletar conjuntos de dados(datasets), que representam as entidades
+4.Limpar e tramsformar dados de acordo com a tecnica ou algoritmo utilizados
+5.Compreender o relacionamento entre os dados
+6.Criar modelos que representem o relacionamento entre os dados
+7.Utilizar modelos para fazer predições
+8.Entregar valor e resultado
+
+- Estatistica pode ser pensada como uma ciencia de aprendizagem a partir de dados.
+
+- O Big Data é o responsável pelas grandes transfomações da atualidade. IA foi desenvolvida na decada de 50. Estatisca existe há decadas.
+  Saber trabalhar com as técnicas de Big Data é o grande diferencial.
+  
+- Declaracao da ASA (Amerian Statistical Association) sobre ciencia de dados: a ASA e seus membros reconhecem que a ciencia de dados 
+  abrange mais do que a estatistica, mas ao mesmo tempo tambem reconhece que a estatistica desempenha um papel fundamental no rapido
+  crescimento deste campo. É nossa esperança que esta declaração possa reforçar a relação da estatistica com a ciencia de dados e ainda
+  fomentar relacionamentos mutuos de colaboração entre todos os contribuintes na ciencia de dados.
+  
+- Aprendizado é a capacidade de se adaptar, modificar e melhorar seu comportamento e suas respostas, sendo portanto uma das propriedades
+  dos seres ditos inteligentes, sejam eles humanos ou nao.
+  
+- Machine Learning é um subcampo da IA que permite dar aos computadores a habilidade de aprender sem que sejam explicitamente 
+  programados para isso.
+  
+- Tipos de aprendizagem
+1.Supervisionada - Mostra-se exemplos de dados com entradas e possiveis saidas. Assim ele consegue prever as proximas saidas.
+2.Nao-Supervisionada - A maquina começa a reconhecer padroes e difereciar em bons ou ruins.
+3.Semi-supervisionada
+4.Aprendizagem e erro - Tentativa e erro com recompensa ou punição
+5.Deep Learning
+
+- Em Machine Learning muitos ainda confundem o que podem fazer com o que desejam fazer.
+
+- Um produto de dados é a combinação de dados com algoritmos estatísticos para fazer inferencia e previsão. São produtos que aprendem com os dados
+  e geram novos dados adaptando-se a esses novos dados também.
+
+https://docs.google.com/presentation/d/16IeMdF10HNoXViWBVkv8TECyyITP2jXU9T5wOeA6eUQ/edit?mc_cid=2c06c560f3&mc_eid=b6d08d79ec#slide=id.g5122678f07_0_460
+https://docs.google.com/document/d/1jBLXzfLajahVoHktnICrc-K2-BIWTasDkvBpAQ9cliE/edit#heading=h.ewz4tc3rthv9
+
+  
+
+
+  
+
+
+	 
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+ 
+  
+
+  
+
+  
+
+  
+
+
+
+
+  
+
+
+
+	 
+
+
+
+  
+
+
+
+
+
+
+
+	 
+ 
+ 
+ 
+
+  
+  
+
+  
+  

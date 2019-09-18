@@ -1,0 +1,190 @@
+
+******* Hadoop
+
+# Documentação Oficial
+https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/CommandsManual.html
+
+# Curso BigData e Machine Learning com Hadoop e Spark
+https://www.youtube.com/channel/UCvXa8p4P6vo5PlH4BI4UxOQ
+
+# Uma jornada rumo à Data Science - Christiano Anderson
+https://www.youtube.com/watch?v=repvSAPjB-s
+
+# Instalação e uso do Spark
+https://www.youtube.com/channel/UCezi21B6fL8H5gim3bRJvCw/videos
+
+- POSIX : Portable Operating System Interface ou Interface Portável entre Sistemas Operativos. É uma família de normas definidas pelo IEEE para a manutenção de compatibilidade 
+          entre sistemas operacionais. Tem como objetivo garantir a portabilidade do código-fonte de um programa a partir de um sistema operacional que atenda às normas POSIX 
+		  para outro sistema POSIX, desta forma as regras atuam como um interface entre sistemas operacionais distintos, enfim, de modo coloquial "programar somente uma vez, 
+		  com implementação em qualquer sistema operacional".
+
+# VM da Hortonworks
+https://www.cloudera.com/tutorials.html
+https://www.cloudera.com/downloads/hortonworks-sandbox.html
+HDP - Hortonworks Data Platform (The HDP Sandbox makes it easy to get started with Apache Hadoop, Apache Spark, Apache Hive, Apache HBase, Druid and Data Analytics Studio (DAS)).
+HDF - Hortonworks DataFlow (The HDF Sandbox makes it easy to get started with Apache NiFi, Apache Kafka, Apache Storm, and Streaming Analytics Manager (SAM))
+Ambari : http://localhost:8080/
+Shell Web : http://localhost:4200/
+ssh root@localhost -p 2222
+VM HDP - Senha (root) : fermi666
+sudo shutdown now (power of)
+
+# Help
+$ hdfs dfs -help
+
+# Acesso ao HDFS (somente leitura) via HTTP
+https://hostNamenode:50070 
+https://hostDatanode:50075
+
+# FSImage e Edit_Log do HDFS
+/hadoop/hdfs/namenode/current
+hdfs oiv -i /hadoop/hdfs/namenode/current/fsimage_0000000000000010301 -o /home/maria_dev/fsimage.xml -p XML
+hdfs oev -i /hadoop/hdfs/namenode/current/edits_0000000000000000001-0000000000000000073 -o /home/maria_dev/edit.xml -p XML
+
+# Listar arquivos no HDFS
+$ hdfs dfs -ls -l
+$ hdfs dfs -ls <caminho>
+
+# Para visualizar arquivos no HDFS
+$ hdfs dfs -cat /tmp/fstab2
+
+# Cria um arquivo vazio
+$ hdfs dfs -touchz /tmp/README.txt
+
+# Remover um arquivo
+$ hdfs dfs -rm /tmp/README.txt
+
+# Mover um arquivo
+$ hdfs dfs -mv /tmp/README.txt <caminho_destino>
+
+# Para copiar arquivos do sistema de arquivos Local para o HDFS.
+  A cópia falha se o arquivo já existe, a menos que a flag -f seja fornecida. 
+  Usando a flag -p, podemos conservar as horas de acesso e modificação, a propriedade e o modo de acesso do arquivo. 
+  A flag -f substitui o destino se já existe.
+$ hdfs dfs -put <caminho_origem_local> <caminho_destino_HDFS> 
+$ hdfs dfs -copyFromLocal <caminho_origem_local> <caminho_destino_HDFS>
+
+# Para mover arquivos do sistema de arquivos Local para o HDFS
+$ hdfs dfs -moveFromLocal <caminho_origem_local> <caminho_destino_HDFS>
+
+# Para copiar arquivos do HDFS para Local
+$ hdfs dfs -get <caminho_origem_HDFS> <caminho_destino_local>
+
+# Para copiar e mesclar arquivos do HDFS para Local
+$ hdfs dfs -getmerge <caminho_origem_HDFS> <caminho_destino_local>
+
+# Para criar um diretório no sistema de arquivos HDFS
+  Usando a flag -p, o comando não falha se o diretório já existir
+$ hdfs dfs -mkdir /tmp/arquivos 
+
+# Para listar de forma recursiva o conteúdo de um diretório no sistema de arquivos HDFS
+$ hdfs dfs -ls -R /tmp
+
+# Para remover um diretório no sistema de arquivos HDFS
+$ hdfs dfs -rmdir /tmp/arquivos 
+
+# Para remover diretórios do sistema de arquivos HDFS de forma recursiva
+$ hdfs dfs -rm -R /tmp/hadoop
+
+# Para mover diretórios do sistema de arquivos Local para o HDFS
+$ hdfs dfs -moveFromLocal /tmp/default /tmp 
+
+# Para exibir espaço em disco no sistema de arquivos HDFS
+$ hdfs dfs -df -h2 
+
+# Para exibir os tamanhos dos arquivos e diretórios
+$ hdfs dfs -du -s -h /tmp/default3
+-s modo silencioso, sem detalhes de subpastas
+-h unidade de tamanho mais proxima
+
+# Para pesquisar um arquivo
+$ hdfs dfs -find /tmp -name README.txt
+$ hdfs dfs -find /tmp -iname readME.txt
+
+# Download de arquivos
+$ git clone https://github.com/bbengfort/hadoop-fundamentals/nome_arquivo
+$ git clone https://github.com/4linux/nome_arquivo
+$ git clone https://github.com/rcfurlan/nome_arquivo
+$ wget http://mattmahoney.net/dc/text8.zip
+$ unzip http://mattmahoney.net/dc/text8.zip 
+
+# MapReduce na linha de comando linux
+  Os pipes do Unix são uma maneira simples e eficiente de testar mapeadores e redutores do Hadoop Streaming e mostrar como o codigo de seu mapeador
+  e de seu redutor serão usados no cluster de modo eficaz. Essa metodologia é muito boa para testes rapidos a medida que voce escrever seus scripts,
+  sem o overhead de esperar a conclusão do job de Hadoop Streaming e sem precisar fazer parse de um traceback Java.
+$ echo "foo foo quux labs foo bar quux" | /home/um_usuario_linux/mapper.py | sort -k1,1 | /home/um_usuario_linux/reducer.py
+
+# Executar o Hadoop Streaming para MapReduce
+  Para implantar o codigo no cluster, precisamos submeter o JAR do Hadoop Streaming ao cliente de Job, passando nossos operadores personalizados
+  como argumentos.
+$ hadoop jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar
+  -file /home/um_usuario_linux/mapper.py      (envia o arquivo a cada nó do cluster antes do processamento, caso contrario é assumido que já estão lá)
+  -file /home/um_usuario_linux/reducer.py     (envia o arquivo a cada nó do cluster antes do processamento, caso contrario é assumido que já estão lá)
+  -mapper /home/um_usuario_linux/mapper.py
+  -reducer /home/um_usuario_linux/reducer.py
+  -input /usr/um_usuario_do_hdfs/arquivo.txt 
+  -output saida
+ 
+Há ainda os frameworks mrjob da Yelp e o Dumbo para escrever MapReduce.
+No caso de programação MapReduce temos:
+1. Combinadores - principal técnica de MapReduce
+2. Particionadores - técnica para garantir que não haja um gargalo no passo de redução. Só permite implementação com código Java.
+3. Encadeamento - técnica para reunir algoritmos e fluxos de dados maiores
+ 
+- Permissões Linux
+-rw-r--r-- 1 dio dio    0 jul 26 14:23  diolinux
+drwxr-xr-x 2 dio dio 4096 jul 26 14:23 'pasta secreta'
+
+Inicia com d é um diretorio
+Inicia com - é um arquivo
+0 1   2   3 
+- --- --- ---
+0 - Informa se é diretorio ou arquivo
+1 - Informa as permissões do dono ou proprietario
+2 - Informa as permissões do grupos
+3 - Informa as permissões dos outros
+
+Valores permitidos : (r) leitura = 4 ; (w) escrita = 2 ; (x) execução = 1
+
+rwx = 4+2+1 = 7
+rw  = 4+2+0 = 6
+ wx = 0+2+1 = 3
+r x = 4+0+1 = 1
+
+chmod: Chamado de "change mode", serve para mudar as permissões de um arquivo ou diretório.
+chown: Chamado de "change owner", serve para mudar o dono de um arquivo ou diretório.
+
+chmod -R 777 nome_da_pasta (o parametro -R acrescenta a permissão recursivamente a todas a subpastas)
+chmod +x 'eu uso linux' (o +x acrescenta permissão de execução para dono, grupo e outros)
+chmod -x 'eu uso linux' (o +x tira permissão de execução para dono, grupo e outros)
+sudo chown <dono>:<grupo> <pasta>
+
+- sudo : super user do (fazer como super usuário). O comando sudo do sistema operacional Unix permite a usuários comuns obter privilégios
+         de outro usuário, em geral o super usuário, para executar tarefas específicas dentro do sistema de maneira segura e controlável pelo administrador.
+		 Um super usuário precisa definir no arquivo /etc/sudoers quais usuários podem executar sudo, em quais computadores podem fazê-lo e quais comandos 
+		 podem executar através dele. Por ser uma tarefa delicada em termos de segurança a edição direta deste arquivo não é recomendada. 
+		 Para isso foi criada a ferramenta denominada visudo que invoca um editor para uma cópia do arquivo /etc/sudoers e em seguida verifica o conteúdo do 
+		 arquivo antes de substituir a configuração atual.
+		 Caso sudo seja executado de forma não permitida pela configuração, um registro da ocorrência é feito no arquivo /var/log/auth.log.
+		 
+- su - : troca o usuario. Com o - apos o su carregamos as variaveis de ambiente associadas aquele usuario que estamos trocando.
+
+- stdin : STandarD INput, ou Entrada Padrão.
+- stdout : STandarD OUTput, ou Saída Padrão.
+- stderr : STandarD ERRor, ou Erro Padrão.
+– Pipe ( | ) : Liga o stdout de um programa ao stdin de outro.
+– Write ( > ) : Redireciona o stdout para outro local (um arquivo, por exemplo).
+– Append ( >> ) : Anexa o stdout para outro local (um arquivo, por exemplo). Repare que há uma pequena diferença entre o “>” e o “>>”: o primeiro apaga o 
+                                                                             conteúdo do destino, para então escrever seus dados; o segundo apenas acrescenta 
+																			 as informações às já existentes.
+
+
+
+
+
+ 
+
+
+
+
+

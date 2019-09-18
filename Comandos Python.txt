@@ -1,0 +1,669 @@
+
+
+VOUCHER DESCONTO 5% : CAP08PYTHON
+
+Livros gratuitos
+https://www.packtpub.com/free-learning
+
+ideas for unit space-time in quantum level
+https://blog.stephenwolfram.com/2015/12/what-is-spacetime-really/
+https://www.wolframscience.com/nks/
+
+http://datascienceacademy.com.br/blog/cientista-de-dados-por-onde-comecar-em-8-passos/
+http://www-personal.umich.edu/~mejn/computational-physics/
+
+# Learning Data Science: Day 9 - Linear Regression on Boston Housing Dataset
+https://medium.com/@haydar_ai/learning-data-science-day-9-linear-regression-on-boston-housing-dataset-cd62a80775ef
+
+Python é uma linguagem poderosa e divertida. Com ela você pode fazer diversas coisas como:
+
+- Construção de sistemas Web com Django, Flask, Pyramid, etc.
+- Análise de dados, Inteligência Artificial, Machine Learning e etc com Numpy, Pandas, Matplotlib, etc
+- Construção de aplicativos com Kivy e Pybee
+- Construção de sistemas desktop com Tkinter, WxPython, etc.
+
+- Python é uma lnguagem interpretada, ou seja, existe uma camada de software (interpretador) entre o meu codigo e o sistema operacional.
+
+- Principais linguagens utilzadas em ciencia de dados: Python, Java, R e Scala.
+
+- Pipeline : sequencia para analise de dados.
+
+- PEP-8 : Melhores praticas para escrita de código.
+PEP, Python Enhancement Proposals ou Propostas para Melhoramento no Python
+
+https://docs.python.org/3.7/
+
+- Não existe a melhor tecnologia! Existe a tecnologia que resolve o problema do cliente!
+
+- Jupyter Notebook : IDE via browser. O Jupiter Lab é considerado uma evolução do Notebook.
+- PyCharm : IDE desktop. Há ainda o Rodeo e o Spider.
+
+# Bibliotecas
+- NumPy : operações matematicas
+- Pandas : tratamento de dados tabulares
+- Sykit-Learning : Machine Learning
+- Matplotlib : Graficos
+- Seaborn : Graficos
+- TensorFlow : construção de modelos de Machine Learning
+
+O que é o Anaconda?
+- É uma distribuição Python que contém um interpretador Python customizado para analise de dados. Já contém uma série de pacotes para essa finalidade.
+
+GitHub?
+É um repositorio para desenvolvedores.
+Furlan : https://github.com/rcfurlan
+DSA : https://github.com/dsacademybr
+DeepFace : https://github.com/iperov/DeepFaceLab (alteração de face em imagens e voz em dialogos)
+
+# Dados para aprendizado e competição de DS
+https://www.kaggle.com/
+
+# Conceitos de algoritmos de Machine Learning
+https://inferir.com.br/artigos/algoritimo-knn-para-classificacao
+
+- No Python a identação define os blocos de código
+
+- https://www.w3schools.com/python/
+
+# Versao do interpretador Python
+>python
+
+# Comentarios
+> # comentario de linha unica
+> """
+> linha 1
+> linha 2
+> """
+
+# Instalar um pacote
+>conda install -c conda.forge <pacote>
+>conda install -c conda.forge jupiterlab==0.31.8
+>pip install <pacote>
+
+# Versao do jupyter lab
+>jupyter lab --version
+
+# Inicializar o jupyter notebook
+diretorio>jupyter notebook
+dica: quando colocamos !<comando> no prompt do jupyter, ele entende que é um comando para o SO executar.
+
+# Inicializar o jupyter lab
+diretorio>jupyter lab
+
+# Executar um script Python (Modo script)
+>python <script>.py
+O Compilador Python traduz um programa.py para bytecode - ele cria um arquivo correspondente chamado programa.cpy.
+Se quisermos ver o bytecode pelo terminal, basta usar o módulo disassembler (dis) que suporta análise do bytecode do CPython,
+desmontando-o. Você pode checar a documentação aqui: https://docs.python.org/3/library/dis.html.
+
+
+# Executar um comando Python no shell (Modo interativo)
+>python <comando python>
+
+Para executar um bloco de comandos no modo interativo:
+
+class Classe:
+
+def main():
+	pass
+
+if __name__ == '__main__':
+	main()
+
+# Entrada de dados
+>input("")
+Ex.
+login = input("Login:")
+senha = input("Senha:")
+
+print("O usuário informado foi: %s, e a senha digitada foi: %s" %(login, senha))
+ou
+print("O usuário informado foi: {0}, e a senha digitada foi: {1}".format(login, senha))
+
+https://pyformat.info/
+
+# Declaracao de variaveis (nome seguida de atribuicao)
+> n = 1
+> n, o , p = 1, "texto", 3.14
+> n = o = p = 3.14
+
+
+# Operacoes matematicas
++ - / * % (Modulo ou resto da divisao) // (Parte inteira da divisao) ** (Potencia)
+Obs.: 
+4 / 2.0 --> 2.0
+5 // 2  --> 2
+
+
+# Operadores relacionais
+== Igualdade ; != Desigualdade 
+
+# Concatenar
+> "Ricardo" + "_" + "Furlan"
+> 'Ricardo' + '_' + 'Furlan'
+
+# Indices de uma string
+> nome = "Ricardo"
+> nome[0] --> R
+
+# Slicing ou quebra de string
+> nome[:n] --> caracteres de 0 a n-1
+> nome[0:] --> caracteres de 0 a n
+> nome[:-1] --> caracteres de 0 a n-1
+> nome[::2] --> caracteres de 2 em 2 Ex: Rcro
+> nome[::-1] --> caracteres de 1 em 1 de tras pra frente Ex: odraciR
+
+# Quebra de linha
+print('\n')
+
+- String é um objeto imutavel. Não podemos executar o comando nome[0] = 'x'
+
+# Repeticao de string
+> nome * 3 --> RicardoRicardoRicardo
+
+# Alguns usos de metodos de string
+nome.upper()
+nome.lower()
+nome.split()
+nome.split('-')
+nome.strip() - Remove espaço em branco do inicio e fim
+nome.capitalize() - Primeiro caractere em maiusculo
+nome.count('a') - Quantas vezes aparece o caractere
+nome.find('r') - Indice da primeira ocorrencia
+nome.replace('atual','posterior')
+nome.islower() - Retorna true se a string é minuscula
+nome.isspace() - Retorna true se a string é espaco
+nome.endswith('o') - Retorna true se termina com 'o'
+len(nome) - Retorna o tamanho da string
+'a' in nome
+'a' not in nome
+ " ".join(["Copa", "de", "2014"]) --> 'Copa de 2014'
+"%d dias para copa" % (100) --> '100 dias para copa' 
+"{} dias para copa".format(100) --> '100 dias para copa'
+"{dias} dias para copa".format(dias=100) --> '100 dias para copa'
+"{1} + {0} = {2}".format(10,20,30) --> '20 + 10 = 30'
+"{:d}".format(um_tipo_int)
+"{:f}".format(um_tipo_float)
+"{:.2f}".format(um_tipo_float) - saida com duas casas decimais
+"{0.real} e {0.imag}".format(um_tipo_complex)
+https://www.python.org/dev/peps/pep-3101/
+
+
+# Listas
+Estrutura de dados que armazena uma sequencia de itens
+https://docs. python.org/3/tutorial/datastructures.html
+lista = [item1,item2,item3,...,itemn]
+lista = [10,'Batman',3.14]
+del lista[3] - delete um item da lista
+
+listas = [[1,2],['A','B']]
+listas[1][0] --> 'A'
+
+len(listas)
+max(listas)
+min(listas)
+sum(listas)
+
+1 in listas
+listas.append('KKK')
+listas.count('KKK')
+type(listas)
+
+for item in old_list:
+ new_list.append(item)
+ 
+listas.extend(['666','999']) - Amplia a lista
+listas.append(1,2) - Aninha objetos --> ['A','B',[1,2]]
+listas.index('KKK') - Retorna a posição de um item na lista
+listas.insert(2,'GGG') - Insere um item na lista em uma posicao especifica
+listas.reverse() - Reverte a ordem da lista
+listas.sort() - Ordena a lista
+listas.clear() - Limpa a lista
+
+
+
+# Tuplas
+Estrutura de dados semelhante as listas. Mas ao contrario destas, são imutáveis, uma vez criadas não podem ser alteradas.
+Ex. dias da semana, meses do ano ...
+Então quando precisar de garantia de não modificação dos itens, tuplas são a solução.
+
+tupla = (item1,item2,...,itemk)
+
+lista = list(tupla) - converte uma tupla em uma lista
+tupla = tuple(lista) - converte um lista em uma tupla
+
+
+
+# Dicionarios
+São estruturas de dados baseadas em pares chave valor, mapeamentos chaves-valores.
+dicionario = {k1:v1,k2:v2,...,kn:vn}
+
+dicionario[k1] --> v1
+dicionario[k1] = v1' - Atribui um novo valor a chave. Caso a chave nao exista o python cria essa chave com esse valor.
+del dicionario - Delete o dicionario criado
+len(dicionario) - numero de chaves do dicionario
+dicionario.keys() - Imprime as chaves
+dicionario.values() - Imprime os valores
+dicionario.items() - Imprime os mapeamentos chave-valor
+dicionario.pop(k1) - Remove o par chave-valor
+dicionario_A.update(dicionario_B) - Faz um union desses 2 dicionarios
+
+É possivel criar dicionarios com valores do tipo lista ou até mesmo outro dicionario
+
+
+# Conjuntos (Set)
+conjunto = {Elem1,Elem2,Elem3,...,ElemK}
+
+suportam operações de uniao, intersecção, diferença e outras.
+
+Uma lista convertida em um Set remove duplicados da lista
+conjunto = set(lista)
+
+# Condicionais
+if (Condicao):   # Pode estar ou nao entre parentesis
+ Comando1
+elif (Condicao):
+ Comando2
+else:
+ Comando3
+ 
+Expressoes If
+var = 'verdadeiro if bool(1) else 'Falso' 
+
+
+# Repetição (strings, listas, tuplas, dicionarios, arquivos)
+for item in serie-de-itens:
+ print(item)
+
+while (condição):
+ print('Alguma coisa')
+else:
+ print('Loop finalizado')
+  
+break - interrompe o loop
+pass - segue o loop
+continue - pula uma iteração e segue o loop  
+
+
+# Metodos
+São basicamente funções incorporadas em objetos para executar algo sobre eles.
+
+objeto.metodo(arg1,arg2,...,argK)
+
+# Funções
+Para criar:
+
+def nomeDaFuncao (arg1,arg2,...,argK):
+ """ Comentarios da funcao """
+ Bloco de codigos
+ Retorno da funcao
+
+Para chamar:
+
+nomeDaFuncao(arg1,arg2,...,argK)
+ou
+nomeDaFuncao(*args)
+
+Obs.: def nomeDaFuncao (arg1, *vartuple): define um numero variavel de arqumentos.
+
+
+# Funcoes lambda ou anonima
+Funcoes criadas em tempo de execução criadas sem a palavra def. 
+É formada por uma unica expressao e nao por um bloco de comandos.
+Utilizadas em conjunto com as funcoes map(), filter() e reduce().
+
+lambda x:x ** 2 - x é o parametro de entrada e a segunda parte é o retorno
+
+Ex: 
+potencia = lambda x:x**2
+potencia(2)
+
+# Expressão with
+O comando with serve para facilitar a escrita de qualquer bloco de código que envolva recursos que precisam ser "finalizados" 
+(isso é, restaurados, liberados, fechados, etc... ) depois que o bloco for encerrado - 
+e ele permite que isso seja feito de forma automática, com a lógica de finalização dentro do objeto utilizado.
+with objeto as alias:
+ alias.metodo1
+ alias.metodo2
+ ...
+ alias.metodoK
+
+# Modulos e Pacotes
+Conjunto de funções (arquivo .py). 
+Pacotes são conjunto de módulos (diretorio com um arquivo __init__.py).
+
+import <nome do pacote>.<modulo> as <alias opcional>
+from <nome do pacote>.<modulo> import <objeto especifico> as <alias opcional> 
+
+help(metodo)
+
+datetime - manipular datas
+math - funcoes matematicas (https://github.com/sympy/sympy/wiki/SymPy-vs.-Mathematica)
+random - valores ramdomicos
+statistics - modulo com funções de estatistica
+os - Manipular o sistema operacional
+sys - Manipular o sistema operacional
+urllib.request - Acessar conteudo web
+pandas - manipular um dataset de forma tabular
+csv - Manipular arquivos csv
+json - Manipular arquivos json
+
+Para criar um modulo, basta criar um arquivo .py e executar import nome_do_modulo.
+
+>conda list - exibe os pacotes instalados (digitar no cmd).
+
+Repositorio do Python https://pypi.python.org/pypi
+
+
+# Funcões basicas (pesquisar por Python Built-in methods)
+type() - Retorna qual é o tipo de numero
+int() - converte em int
+float() - converte em numero decimal
+complex() - converte em numero imaginario
+str() - converte em string
+abs() - valor absoluto
+round() - aredondamento
+math.pow() - potencia
+math.sqrt() - raiz quadrada
+random.choice(['A','B','C']) - Seleciona um elemento aleatoriamente
+random.sample(range(100),10)) - Gera uma amostra aleatoria
+random.randrange(1,10) - numero aleatorio no intervalo
+bool(0) --> False ; bool(1) --> True
+help(objeto.metodo) - ajuda do python
+dir(objeto) - mostra todos os atributos e metodos de um objeto
+range(valor_inicial,limite_final,passo) - gera um range de itens
+os.getcwd() - diretorio de trabalho atual
+lista = [x for x in 'Python'] - list comprehension é mais veloz que map
+map(função,sequência) - automatiza uma operação em uma sequencia. Retorna um iterator e deve ser convertido para uma lista
+reduce(função,sequência) -  from functools import reduce
+filter(função,sequência) - 
+zip([1,2,3,4],[1,2,3]) --> (1,1)(2,2)(3,3) - Retorna um Iterator
+enumerate(['a','b','c']) --> (0,'a')(1,'b')(2,'c') - Retorna um Iterator
+image(camiho_nome_arquivo) - from IPython.display import image
+Obs.: A chamada pode ser feita como : objeto.atributo ou objeto.metodo(parametros)
+
+
+# Tratamento de Exceções
+Uma Exception é um problema que ocorre enquanto o código está sendo executado. 
+Já o SyntaxError é um problema detectado quando o Python verifica o código antes de executá-lo, ou seja, em tempo de compilação.
+
+try:
+ comandos...
+except Excecao1 as e:
+ comandos...
+except Excecao2 as e: 
+ comandos...
+ print(e)
+else:
+ comandos se nao houver uma das excecoes anteriores...
+finally:
+ comandos independentes de erros ou não...
+ 
+https://docs.python.org/3/library/exceptions.html
+ 
+ 
+# Classes
+class NomeClasse ():
+ atributos
+ metodos
+ 
+- Em Python, as instâncias das classes podem ser modificadas em tempo de execução.
+- Em Python, alguns nomes de métodos estão reservados para o uso da própria linguagem. 
+  Um desses métodos é o que representa o construtor, sendo seu nome __init__(). 
+  Outra característica é que, pelo The Zen of Python, explícito é melhor que implícito. 
+  Logo, o primeiro parâmetro do construtor – assim como em todos métodos de instância – é sempre a 
+  própria instância. No nosso caso, é aque está sendo criada. Por convenção, esse argumento tem o nome de self.
+- Agora, quando uma classe é criada, todos os seus atributos serão inicializados pelo método __init__(). 
+  Apesar de muitos programadores chamarem este método de construtor, ele não cria um objeto conta. 
+  Existe outro método, o  __new__() que é chamado antes do  __init_()  pelo interpretador do Python. 
+  O método  __new__() é realmente o construtor e é quem realmente cria uma instância de  Conta . 
+  O método  __init__() é responsável por inicializar o objeto, tanto é que já recebe a própria instância (self) criada pelo construtor como argumento.
+- Metodos que começam com __ são chamados de metodos magicos.
+ 
+class Livro():
+        # Construtor chamado para criar um objeto dessa classe
+  def __init__(self,titulo,isbn):  
+   self.titulo = titulo
+   self.isbn = isbn
+   
+  def imprime(self):
+   print(self.titulo,' e ',self.isbn)
+   
+Livro1 = Livro('Batman',666)
+
+""" Cria apenas a especificação de uma classe
+class Carro(object):
+ pass
+
+palio = Carro()
+type(palio)
+
+""" Funçoes para manipular atributos
+hasattr(objeto,atributo)
+setattr(objeto,atributo,valor)
+getattr(objeto,atributo)
+delattr(objeto,atributo)
+   
+x = 1
+y = 1
+x is y --> True (Objetos da mesma classe)
+
+x = 1
+y = 1.0
+x is y --> False (Objetos de classe diferentes)
+
+Arquivo.py (contem Classe1 e Classe2)
+from Arquivo import Classe1
+from Arquivo import Classe2
+
+classe = Classe1()
+type(classe) --> Arquivo.Classe1
+classe = Classe2()
+type(classe) --> Arquivo.Classe2
+
+id(classe) --> 77406728 - Retorna a referencia de memoria
+dir(objeto) - Retorna todos os metodos dele
+vars(objeto) ou objeto.__dict__ - Retornam um dicionario com atributo:valor
+
+- Em Python não exite realmente um atributo privado. Escrever dessa forma _atributo, indica que não deve se acessado,
+  mas sim, é possivel alterar diretamente.
+
+- Um conjunto de métodos públicos formam uma interface de uma classe, pois esta é a única maneira a qual você se comunica com objetos dessa classe. 
+
+- O underscore _ alerta que ninguém deve modificar, nem mesmo ler, o atributo em questão. 
+
+- Um método que é usado para obter um valor (o getter) é decorado com  @property, isto é, colocamos essa linha diretamente acima da declaração do método 
+  que recebe o nome do próprio atributo. O método que tem que funcionar como setter é decorado com  @saldo.setter. 
+  Se a função tivesse sido chamada de "func", teríamos que anotá-la com  @func.setter.
+  
+- É uma má prática criar uma classe e, logo em seguida, criar as propriedades para todos seus atributos. Você só deve criar properties se tiver real necessidade. 
+  Repare que nesse exemplo, a propriedade setter do saldo não deveria ter sido criada já que queremos que todos usem os métodos deposita() e saca().
+  
+- Atributos declarados sem o self. são considerados de classe
+
+- Métodos estáticos não precisam de uma referência, não recebem um primeiro argumento especial (self). É como uma função simples que, por acaso, 
+  reside no corpo de uma classe em vez de ser definida no nível do módulo.
+
+- Métodos estáticos não devem ser confundidos com métodos de classe. Como os métodos estáticos, métodos de classe não são ligados às instâncias, mas sim a classe. 
+  O primeiro parâmetro de um método de classe é uma referência para a classe, isto é, um objeto do tipo class que por convenção nomeamos como 'cls'. 
+  Eles podem ser chamados via instância ou pela classe e utilizam um outro decorar, o @classmethod.
+  
+- No início pode parecer confuso qual usar:  @staticmethod  ou  @classmethod ? Isso não é trivial. Métodos de classe servem para definir um método que opera na classe, 
+  e não em instâncias. Já os métodos estáticos utilizamos quando não precisamos receber a referência de um objeto especial (seja da classe ou de uma instância) 
+  e funciona como uma função comum, sem relação.
+  
+- Embora  __slots__  seja muito utilizado para não permitir que usuários de nossas classes criem outros atributos, essa não é sua principal função nem o motivo de sua existência.
+  O que acontece é que o __dict__  desperdiça muita memória. Imagine um sistema grande, com milhões de instâncias de Conta  - teríamos, consequentemente, 
+  milhões de dicionários de classe armazenando seus atributos de instância. O Python não pode simplesmente alocar uma quantidade estática de memória na criação de objetos 
+  para armazenar todos os atributos. Por isso, consome muita memória RAM se você criar muitos objetos. Para contornar este problema é que se usa o  __slots__  
+  e este é seu principal propósito. O __slots__  avisa o Python para não usar um dicionário e apenas alocar espaço para um conjunto fixo de atributos.
+  Programadores viram uma redução de quase 40 a 50% no uso de RAM usando essa técnica.
+
+
+# Arquivos
+É criado como um objeto. Os principais são:
+open(arquivo,modo) - Abrir arquivos
+read() - Ler arquivos
+write() - Escrever no arquivos
+seek(x,y) - Posiciona o cursor em uma linha e coluna
+realines() - Retorna a lista de linhas
+close() - Fecha o arquivo
+tell() - Conta o numero de caracteres
+
+
+# Banco de Dados
+SQLite é um banco de dados simples, um único arquivo multiplataforma, e que já é instalado junto com o Anaconda.
+É amplamente utilizado por navegadores e smartfones.
+Não requer um processo ou serviço sendo executado em um servidor.
+Apropriado para:
+1. Dispositivos embarcados (internet das coisas)
+2. Websites com tráfego médio
+3. Análise de dados
+4. Cache local para dados de RDBMS
+5. Stage para manipulacao de dados por programas
+
+www.sqlite.org/docs.html
+www.sqlitebrowser.org
+www.nosql-database.org
+www.db-engines.com
+
+
+# Input Box
+https://www.tutorialspoint.com/python3/tk_messagebox.htm
+
+import tkinter as tk
+from tkinter import simpledialog
+from tkinter import messagebox
+
+root = tk.Tk()  # cria uma janela
+root.withdraw() # remove a janela da tela (sem destruí-la)
+
+texto = simpledialog.askstring(title="Titulo da Janela",prompt="Digite algo:")
+
+print("Texto digitado :", texto)
+messagebox.showinfo("Texto digitado", texto)
+
+
+# Parametros linha de comando
+import sys
+param = sys.argv[1:]
+
+
+# Monitorando diretorios
+https://imasters.com.br/back-end/utilizando-a-api-watchdog-em-python
+
+
+# Contagem de frequencias em uma lista
+lista = ['A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','B','B','B','B','B','B','B','B','B','B','B','B','B','B','B','B']
+listaUnicaOrdenada = sorted(set(lista)) """ Converte para um conjunto com elementos distintos e depois ordena e cria uma nova lista """
+dicionario = {}
+
+for elemento in listaUnicaOrdenada
+ dicionario[elemento] = lista.count(elemento)
+ 
+dicionario = {'A':21,'B':16}
+
+ou 
+
+from collections import Counter
+lista = ['A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','B','B','B','B','B','B','B','B','B','B','B','B','B','B','B','B']
+dicionario = dict(Counter(lista))
+
+# Listando arquivos em um diretorio
+import os
+for meta_file in os.listdir('data/meta-data'): 
+    print(meta_file) 
+
+	
+# Numpy - Pacote para computação matematicas
+- Oferece suporte para arrays e matrizes, além de funções matemáticas para operações com esses objetos
+- Oferece um rapido e eficiente array multidimensional
+- Ferramentas para leitura de datasets baseadas em array
+- Operações de algebra linear
+- Integração com C, C++ e FORTRAN
+- Utilizado também como troca de mensagens entre algoritmos diferentes
+- Em arrays Numpy todos os elementos devem ser do mesmo tipo e seu tamanho não pode ser modificado
+- São a base para construção de muitos modelos de machine-learning em Python
+- www.numpy.org
+- import numpy as np
+
+
+# Pandas - Dados em formato tabular
+- 70 a 80% do tempo de um cientista de dados é gasto preparando, pre-processando e explorando os dados antes aplicá-los a um modelo de machine-learning.
+- O Pandas é amplamente usado nessa fase de preparação dos dados.
+- As principais estruturas em Pandas são: Series e DataFrames
+- www.pandas.pydata.org
+- import pandas as pd
+
+
+# Matplotlib - Para visualização de dados
+- Possibilidade de exportar os gráficos gerados nos mais variados formatos
+- www.matplotlib.org/gallery
+- import matplotlib as mpl
+  import matplotlib.pyplot as plt
+  
+# SciPy
+- Utilizado para computação científica
+- Quando utilizado em conjunto com o NumPy, possue as mesmas funcionalidades do MatLab
+- www.scipy.org
+
+# SymPy 
+- É uma biblioteca Python para computação simbólica. Ela fornece ferramentas de álgebra computacional tanto como uma aplicação independente como, também, 
+  uma biblioteca para outras aplicações. Ainda, a biblioteca está disponível de forma on-line nos sítios de internet:SymPy Live e SymPy Gamma. 
+  Sympy é fácil de ser instalada e analisada, pois é escrita em Python e não depende de bibliotecas adicionais.
+  
+# SimPy ("Simulation in Python") 
+- É um ambiente para a simulação de eventos discretos baseado no Python. Seu despachador de eventos é baseado em funções geradoras e também pode ser usado 
+  para redes assíncronas ou para implementar sistemas de multiagentes (tanto com comunicação simulada, quando real).
+  Processos em SimPy são meras funções geradoras em Python e são utilizadas para modelar entidades, tais como: clientes, veículos ou agentes. 
+  SimPy também fornece vários tipos de recursos compartilhados para modelar sistemas com capacidade limitada (como servidores, guichês de atendimento, estações de trabalho etc.). 
+  A partir da versão 3.1, serão disponibilizados recursos de monitoramento, que permitirão extrair diversas estatísticas sobre recursos e processos existentes em um modelo.
+  As simulações podem ser realizadas "o mais rápido quanto possível", avançando o tempo de simulação ou manualmente, eventos a evento.
+  Embora seja teoricamente possível fazer simulações de processos contínuos com o SimPy, ele não nenhum recursos específico para realizar isso. 
+  No entanto, SimPy é excelente para as simulações com um tamanho fixo de passo, onde os processos não interagem um com os outros ou com recursos partilhados — um simples loop while é suficiente neste caso.
+  
+# Bokeh
+- Biblioteca javascript rodando em python
+- Visualização interativa em web browsers com alto desempenho em big data e streaming
+- Gráficos estatísticos complexos
+- Saída em varios meios com html e jupyter notebook
+- Pode transformar visualizações escritas em outras bibliotecas python
+- www.bokeh.pydata.org
+
+# Statsmodels
+- Pacote com ferramentas estatisticas
+- www.statsmodels.org
+
+# Seaborn
+- Visualização estatística
+- www.seaborn.pydata.org
+- import seaborn as sea
+
+# Scikitlearn
+- Usado para criar modelos de machine learning e não para leitura, manipulação e sumarização dos dados.
+- Em geral, um problema de aprendizagem considera um conjunto de amostras de dados, e em seguida,
+  tenta prever propriedades em dados desconhecidos.
+- Aprendizagem supervisionada (Classificação e Regressão), não supervisionada (Clusterização e Redução de Diemnsionalidade) e por reforço.
+- scikit-learn.org
+- import sklearn
+- Machine learning prevê algum problema ou comportamento, mas quem toma a decisão é um humano com suporte do modelo.
+
+# Pydoop 
+  É uma interface Python para o Hadoop que permite escrever aplicativos MapReduce e interagir com o HDFS em Python puro.
+
+# AstroPy
+- É uma coleção de pacotes de software escritos na linguagem de programação Python e projetados para uso em astronomia.
+  
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,296 @@
+
+########### CONCEITOS ###########
+Banco de dados focado em processamento veloz da informaçao.
+
+Caracteristicas:
+- Armazenamento em memoria
+- Arquitetura multi-core
+- Armazenamento colunar
+- Particionamento
+- Compressão dos dados
+- Processamento massivo em paralelo
+- Acesso aos dados (5 milisegundos Hard Disk e 5 nanosegundos Na Memoria)
+
+- Uma das vantagens da utilização de armazenamento colunar é a capacidade de compactar uma série
+de valores repetidos nas colunas, atingindo altas taxas de redução de espaço.
+
+- O armazanamento em linha é muito bom para os sistemas transacionais, onde o foco principal é trabalhar no registro individualmente.
+- Mas e para sistemas analíticos, onde normalmente selecionamos uma quantidade maior de registros e, muitas vezes,
+fazemos uma projeção na linguagem sql e selecionamos apenas algumas colunas de uma tabela?
+- Em virtude da compactação deste formato, ganhamos também no I/O nos momentos que precisamos ler as informações,
+afinal é muito melhor ler gigabytes de informação, do que ler terabytes.
+
+- Os tipos de sistemas mais indicados para uso de armazenamento em colunas são os sistemas que precisam ler e realizar operações
+de consultas em grandes volumes de dados (OLAP), para sistemas do tipo OLTP as operações de escrita podem não ser tão vantajosas.
+
+Se você quer uma carreira no HANA, há várias áreas nas quais você pode se especializar, como:	
+1. A modelagem do SAP HANA 
+   Nesta função, você precisará das habilidades de modelagem do SAP HANA. O SAP BW nas habilidades do HANA também será útil para você.	
+   O roteiro de aprendizagem do SAP HANA Modeler também tem uma certificação profissional e associada que impulsionará sua carreira.	
+2. O desenvolvimento de aplicativos do SAP HANA	
+   Nesta função, você precisará da habilidade de desenvolvimento do SAP HANA. Com base nos tipos de aplicativos, o HANA XS ou ABAP no conhecimento do HANA também será útil. 
+3. Administração e segurança do banco de dados do SAP HANA	
+   Nessa função, você será responsável pelo backup / recuperação, desempenho, segurança e administração geral no banco de dados do SAP HANA.	
+4. A replicação de dados do SAP HANA - SLT Replication, BODS e DXC	
+   Nesta função, você será responsável por configurar a replicação, oferecer suporte à replicação de dados de diferentes origens para os sistemas do HANA.
+
+- Pasta Catalog contém os principais objetos do HANA database (Table, View, Procedure, Function, Index, Trigger, Sequence, etc).
+- Pasta Content contém desenvolvimentos na camada de database (Calculations View (camada semântica), analític views, jobs, ui, etc).
+- Pasta Provisioning (movimentação de dados com SDI e data quality com SDQ).
+- Pasta Security (atribuição de permissões e privilégios).
+
+https://blogs.sap.com/2017/09/20/sap-hana-smart-data-integrator-on-sap-hana-express-edition-hxe/
+
+
+########### INSTALAÇÃO ###########
+User             : hxeadm
+PassServerDefault: HXEHana1
+PassServerNew    : VMHANADB123
+PassHanaDB       : VMhanadb123
+
+User             : SAP_DS
+PassHanaDB       : Password123
+
+
+# Start Server
+> HDB start
+
+# Stop Server
+> HDB stop
+
+# Desligar Linux Suse
+> sudo poweroff
+ou
+> sudo shutdown -h now
+
+# Reiniciar Linux Suse
+> sudo shutdown -r 0
+
+# Informação de configuração
+> sudo ifconfig
+192.168.1.105
+
+# Fixar um IP
+> sudo yast lan
+
+# Alterar arquivo de host da VM
+> sudo vi /etc/hosts
+
+# Arquivo host
+# VM_HANA_XSC_EXPRESS_2.0
+# 192.168.43.150   hxehost
+
+
+# Instalação ODBC Driver
+https://www.sap.com/developer/tutorials/hxe-ua-dbfundamentals-odbc.html
+
+# Instalação SDI
+https://www.sap.com/developer/tutorials/hxe-ua-sdi-vm.html
+
+# Configuração de proxy
+https://www.sap.com/developer/tutorials/hxe-install-git.html
+
+
+########### DATA PROVISIONING AGENT ###########
+# Instalar um novo adapter
+cd /usr/sap/dataprovagent/lib
+MssqlLogReaderAdapter
+
+# DPAgent Configuration Tool 
+cd /usr/sap/dataprovagent/bin
+export DPA_INSTANCE=/usr/sap/dataprovagent (sempre que for fazer uma nova configuração)
+./agentcli.sh –configAgent
+
+Opções
+1. Agent Status
+2. Start or Stop Agent
+3. Agent Preferences
+4. SSL Keystores
+5. SAP Hana Connection
+6. Agent Registration
+7. Adapter Registration
+8. Custom Adapters
+9. Agent & Adapter Versions
+q. Quit
+b. Back
+
+Sequência:
+1. Start Agent
+2. Connection Hana
+3. Agent Registration
+4. Adpater Registration   
+
+https://gerardnico.com/db/hana/sdi/sdi (Excelente)
+https://blogs.sap.com/2016/03/10/hana-smart-data-integration-installing-the-dp-agent/
+https://sapstudent.com/hana/sdi-installation-in-sap-hana-express-editionhana-2-sps2
+
+
+########### CLOUD HANA TRIAL ###########
+https://account.hanatrial.ondemand.com
+Region host: hanatrial.ondemand.com
+User ID : p1289686423trial (subaccount)
+Password: Password123
+Subaccount user: p1289686423
+Password: Password123
+
+Database: vmlearning
+Users: SYSTEM ; VM_LEARNING
+Password: Password123vmlearning	
+
+Clod connector
+https://tools.hana.ondemand.com/#cloud
+
+
+########### COMANDOS ###########
+/* Identificar a porta correta para um HANA multi-database */
+SELECT DATABASE_NAME,SERVICE_NAME,PORT,SQL_PORT,(PORT + 2) HTTP_PORT 
+FROM SYS_DATABASES.M_SERVICES WHERE DATABASE_NAME='<DBNAME>' and 
+((SERVICE_NAME='indexserver' and COORDINATOR_TYPE= 'MASTER') or (SERVICE_NAME='xsengine'))
+
+/* Autorização para novo usuário */
+CREATE USER SAP_DS PASSWORD Senha123;
+INSERT INTO _SYS_REPO.PACKAGE_CATALOG(PACKAGE_ID, SRC_SYSTEM, SRC_TENANT, DESCRIPTION, RESPONSIBLE, IS_STRUCTURAL)
+VALUES('SAP_DS','MDB','','SAP_DS','SAP_DS',0);
+
+GRANT AGENT ADMIN TO SAP_DS;
+GRANT CREATE REMOTE SOURCE TO SAP_DS;
+GRANT ADAPTER ADMIN TO SAP_DS;
+
+CALL GRANT_ACTIVATED_ROLE('sap.hana.xs.ide.roles::Developer','SAP_DS');
+CALL GRANT_ACTIVATED_ROLE('sap.hana.xs.ide.roles::EditorDeveloper','SAP_DS');
+CALL GRANT_ACTIVATED_ROLE('sap.hana.xs.ide.roles::CatalogDeveloper','SAP_DS');
+
+GRANT EXECUTE ON REPOSITORY_REST TO SAP_DS;
+GRANT EXECUTE ON GRANT_ACTIVATED_ROLE TO SAP_DS;
+GRANT EXECUTE ON REVOKE_ACTIVATED_ROLE TO SAP_DS;
+GRANT REPO.READ, REPO.EDIT_NATIVE_OBJECTS, REPO.ACTIVATE_NATIVE_OBJECTS, REPO.MAINTAIN_NATIVE_PACKAGES ON "SAP_DS" TO SAP_DS;
+GRANT REPO.EDIT_IMPORTED_OBJECTS, REPO.ACTIVATE_IMPORTED_OBJECTS, REPO.MAINTAIN_IMPORTED_PACKAGES ON "SAP_DS" TO SAP_DS;
+
+/* Após conectar com o usuário criado */
+GRANT CREATE_ANY, SELECT, INSERT, UPDATE, DELETE, EXECUTE ON SCHEMA SAP_DS TO _SYS_REPO WITH GRANT OPTION;
+
+/* Visualizar privilegios */
+SELECT * FROM "PUBLIC"."EFFECTIVE_ROLES" where USER_NAME = 'anyUserName';
+
+/* Ligar/Desligar trace para privilegios */
+alter system alter configuration ('indexserver.ini','SYSTEM') SET 
+('trace','authorization')='info' with reconfigure;
+
+alter system alter configuration ('indexserver.ini','SYSTEM') UNSET 
+('trace','authorization') with reconfigure;
+
+/* Monitorar maquina */
+top
+
+/* Para visualizar DB Name, Host, Port, etc */
+SELECT * FROM SYS_DATABASES.M_SERVICES
+
+/* Para visualizar Agents conectado HANA */
+SELECT TOP 1000 * FROM "SYS"."M_AGENTS"
+
+/* Para visualizar Adapters do HANA */
+SELECT * FROM "SYS"."ADAPTERS"
+
+/* COMENTARIO DE LINHA */
+-- Comentario
+
+/* HELP */
+https://help.sap.com/viewer/4fe29514fd584807ac9f2a04f6754767/2.0.00/en-US/20ff532c751910148657c32fe3431a9f.html
+
+/* SCHEMA */
+CREATE SCHEMA mySchemaName OWNED BY userName;
+GRANT SELECT, INSERT, UPDATE, DELETE, DROP, EXECUTE, DEBUG, ALTER ON SCHEMA mySchemaName TO _SYS_REPO WITH GRANT OPTION;
+
+/* SELECT */
+https://help.sap.com/viewer/4fe29514fd584807ac9f2a04f6754767/2.0.00/en-US/20a6791f751910148d2bfe3814192a01.html
+SELECT 1 FROM DUMMY;
+
+SELECT TOP 10 * FROM SCHEMA.TABLE;
+
+SELECT COL1 FROM SCHEMA.TABLE_A
+MINUS
+SELECT COL1 FROM SCHEMA.TABLE_B
+
+SELECT CASE WHEN CONDITIONAL THEN ACTION_TRUE ELSE ACTION_FALSE END FROM SCHEMA.TABLE;
+
+SELECT * FROM SCHEMA.TABLE WHERE COL1 IN ('VAL1','VAL2');
+
+SELECT TABLE_NAME 
+  FROM SYS.M_TABLES
+ WHERE SCHEMA_NAME = 'BODS_STAGE'
+ORDER BY TABLE_NAME;
+
+/* INSERT */
+INSERT INTO SCHEMA.TABLE (COL1, COL2, COL3, COL4, COL5) VALUES ('VAL1','VAL2','VAL3','VAL4','VAL5');
+
+INSERT INTO SCHEMA.TABLE
+SELECT COL1
+     , COL2
+	 , COL3
+	 , COL4
+	 , COL5
+  FROM TABLE A
+	 , TABLE B
+    ON A.COL1 = B.COL2;
+	
+/* UPDATE */
+UPDATE SCHEMA.TABLE_A
+   SET COL1 = 'VAL1'
+     , COL2 = 'VAL2'
+  FROM SCHEMA.TABLE_A
+     , SCHEMA.TABLE_B
+	WHERE
+		TABLE_A.COL1 = TABLE_B.COL2;
+		
+/* SEQUENCE */
+Utilizada para se criar uma sequencia especifica
+SELECT NAME_SEQUENCE.CURRVAL FROM DUMMY;
+SELECT NAME_SEQUENCE.NEXTVAL FROM DUMMY;	
+		
+		
+/* PROCEDURE */
+CREATE PROCEDURE SCHEMA.PROCEDURE(IN PARAMETER DATA_TYPE) 
+LANGUAGE SQLSCRIPT 
+DEFAULT SCHEMA NAME_SCHEMA AS
+BEGIN
+
+	UPDATE SCHEMA.TABLE_A SET COL1 = :PARAMETER;
+
+END;
+
+/* FUNCTIONS */
+https://help.sap.com/viewer/4fe29514fd584807ac9f2a04f6754767/2.0.00/en-US/f12b86a6284c4aeeb449e57eb5dd3ebd.html
+CURRENT_DATE;
+CURRENT_TIMESTAMP;
+IFNULL(COL,'VAL');
+TRIM('STRING');
+HASH_MD5 (to_binary('STRING'));
+'STRING_A' || '_' || 'STRING_B';
+
+
+/* VIEW */
+CREATE VIEW SCHEMA.VIEW (COL1, COL2, COL3, COL4, COL5)
+AS SELECT * 
+     FROM SCHEMA.TABLE_A, SCHEMA.TABLE_B 
+       ON A.COL1 = B.COL2 WITH READ ONLY;
+
+/* ESTRUTURAS DE PROGRAMAÇÃO */
+DECLARE VAR DATA_TYPE;
+VAR = 'VALUE';
+
+FOR CONDITIONAL DO
+	COMMAND
+END FOR;
+
+IF CONDITIONAL THEN
+	COMMAND
+ELSEIF CONDITIONAL THEN
+	COMMAND
+ELSE
+    COMMAND
+END IF;	
+	
+
+
+
+

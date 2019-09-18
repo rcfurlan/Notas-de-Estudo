@@ -1,0 +1,269 @@
+
+Conceitos
+  O Linux é dividido em 2 partes: o Kernel, que é a camada nucleo do SO responsável por conectar os programas ao hardware e a camada de aplicativos (distribuições Linux).
+  Raramente utilizamos um sistema operacional diretamente. O que usamos são programas, que utilizam recursos como arquivos, internet e memória, ambos providos pelo sistema operacional.
+  Quando você usa o Internet Explorer e o Word, ambos pedem aos componentes internos do Windows, que é o verdadeiro sistema. 
+  A melhor forma de pensar em Sistema Operacional é imaginar um conjunto de vários programas unidos, aguardando serem usados. Com essa definição em mente podemos dizer que 
+  distribuições Linux como Slackware, Debian, Ubuntu, RedHat e Fedora são um aglomerado de programas e configurações específicas. São sabores diferentes do Linux.
+  Há vantagens e desvantagens em cada uma delas. 
+  www.kernel.org
+  www.distrowatch.com   
+  A distro Debian é uma das mais antigas, estavel e rebusta. A distro Ubuntu é desenvolvida a partir da distro Debian. Para estudar
+  uma distro Server, comece com o CentOS, pois é uma cópia da distro RedHat, utilizada pela grande parte das organizações.
+
+Shell 
+  É a interface de acesso ao sistema operacional, onde é possível interagir com o sistema por meio de comandos digitados do teclado. 
+  
+Prompt
+~ - é a abreviação para a pasta do usuário
+# - indica que o usuário não possui poderes de administrador
+$ - indica que o usuário possui poderes de administrador
+    no Linux tudo é considerado um arquivo.
+
+Comando para mudar de shell
+# sh 
+# csh
+# bash
+
+Comando do manual linux
+No Linux a documentação padrão é chamada de man pages, ela contém ajuda para todos os comandos padrões.
+# man <comando>
+# whatis <comando>
+
+
+Comando de ajuda
+# help <comando>
+# <comando> --help
+
+Comando para informações do sistema
+# cat /proc/version .........Versão do seu sistema
+# cat /proc/cpuinfo Informações sobre o processador.
+# cat /proc/pci .... Lista dispositivos pci do sistema
+# cat /proc/ide/hdx/model ... Modelo da unidade de disco (hdx = identificação do disco)
+# df -ah ... Capacidade da unidade de disco
+# cat /proc/partitions .. Exibe as partições do sistema
+# cat /proc/meminfo ... Informações sobre memória no sistema
+# date ... data e hora atual
+# whoami ... usuario atual
+# history ... exibe os comandos digitados na sessão
+
+Comando para informações de IP
+# /sbin/ifconfig
+
+Comando para exibir o historico de comandos
+# history
+
+Comando para executar com outro usuario a partir do root
+# su - <outro usuario>
+
+Comando para alrerar permissão de arquivo
+# chmod XXX <nome_arquivo>
+proprietário, grupo e público:
+0 = Nenhuma permissão
+1 = Apenas execução
+2 = Apenas gravação
+3 = Execução e gravação
+4 = Apenas leitura
+5 = Execução e leitura
+6 = Leitura e gravação
+7 = Todos; leitura, gravação e execução 
+
+Comando para criar pastas
+# mkdir -p existente/não_existente_pai/não_existente_filho
+
+Comando para exibir estrutura de pastas fisicas
+# df -k
+
+Comando para deletar arquivos ou pastas
+# rm <arquivo>
+# rmdir <diretorio> ... se não existir conteudo
+# rm -R <diretorio> ... mesmo se existir conteudo, mas pedindo confirmação em cada deleção
+# rm -Rf <diretorio> ... mesmo se existir conteudo, não pedindo confirmação em cada deleção
+
+Comando para mover arquivos ou pastas. Também pode ser usado para renomear.
+# mv <origem> <destino>
+# mv <nome_atual> <novo_nome>
+
+Comando para renomear arquivos
+# rename <string_pesquisa> <string_troca> <nome_arquivo>
+
+Comando para listar conteudo de pasta
+# ls ... listagem simples
+# ls -l ... listagem detalhada
+# ls -a ... conteudo oculto. Os arquivos ocultos possuem um "." no inicio e diretorios um ".:"
+
+
+Comando para navegar em pastas
+ir : # cd /<nomedapasta>
+voltar : # cd ..
+voltar para raiz : # cd
+aponta direto para o diretório home do usuário (ou pasta do usuário) : # cd ~
+último diretório onde esteve : # cd -
+mudar para o diretorio que já estamos, ou seja, continuar na mesma : # cd .
+diretorio atual : #pwd
+
+
+Comando para verificar uma lib existente
+# rpm -qa | grep <nome da lib>
+
+Comando para verificar dependência entre libs
+# ldd <nome da lib> 
+
+Comando para visualizar o conteúdo de uma variável
+# printevn <nome da variavel>
+Ex: printenv SHELL
+
+Comando para setar variavel
+# setenv <nome da variavel> <valor>    ( csh )
+# export <nome da variavel>="<valor>"  (  sh )
+
+Comando para gerar hash code MD5
+# echo -n 'string' | md5sum | cut -d' ' -f1"
+
+Editor VIM - VI iMproved
+# vim arquivo.txt (abrir)
+# pressionar tecla i para alerar para modo inserção
+# modificar o arquivo
+# pressionar esc para voltar para modo visual
+# :q para sair
+# :w para salvar
+# :wq para salvar e sair
+https://canaltech.com.br/linux/conheca-e-aprenda-a-usar-o-editor-vim-no-linux/
+
+Maiscomandosquefacilitamamovimentação:
+• G  moveparaaúltimalinhadoarquivo; 
+• gg moveparaaprimeiralinhadoarquivo; 
+• 0  moveocursorparaoiníciodalinha; 
+• $  moveocursorparaofinaldalinha.
+Algunscomandosbásicosparaajudarnainserçãodetexto:
+• i para inserir texto antes do cursor; 
+• a para inserir texto depois do cursor; 
+• A para inserir texto no final de uma linha onde se encontra o cursor; 
+• o para adicionar uma linha abaixo da linha atual; 
+• O para adicionar uma linha acima da linha atual.
+
+vimbook,um guia em português, ótimo para consultas:
+https://code.google.com/archive/p/vimbook/
+
+
+Cria um arquivo
+# touch <arquivo>
+# echo "algum texto" > <arquivo> ... se já existir ele apaga todo conteudo e acrescenta o novo conteudo
+# echo "algum texto" >> <arquivo> ... se já existir ele mantém todo conteudo e acrescenta o novo conteudo
+# <retorno de algum comando> > <arquivo>
+
+ou 
+
+# cat > <arquivo> ; cat >> <arquivo>
+# linha 1
+# linha 2
+Enter
+Ctrl + d
+
+
+Comando para visualizar o conteúdo de um arquivo
+# cat <nome do arquivo> ... visualiza tudo 
+# cat -t <nome do arquivo> ... visualiza tudo com exibição de tab
+# cat -e <nome do arquivo> ... visualiza tudo com exibição de enter
+# cat -n <nome do arquivo> ... visualiza tudo com numeração de linhas
+# more <nome do arquivo> ... visualiza tudo mas em partes
+# head -n <numero de linhas> <nome do arquivo> ... visualiza as n primeiras linhas 
+# tail -n <numero de linhas> <nome do arquivo> ... visualiza as n ultimas linhas
+# file <nome do arquivo> ... informações do arquivo
+
+
+Concatenar arquivos
+# cat <arquivo_1> <arquivo_2> > <arquivo_concatenado>
+
+Pesquisar arquivos
+# find <diretorio> -name <nome ou parte do nome do arquivo> ... aceita * para pesquisar partes do nome
+# find <diretorio> -user <nome de usuario>
+# find <diretorio> -atime <acessado em x dias>
+# find <diretorio> -atime +1 ... acessado a mais de 1 dia
+# find <diretorio> -atime -1 ... acessado em menos de 1 dia
+
+Compactaçãoe e Descompactação de arquivos
+O tar é excelente para agrupar vários arquivos em apenas um.
+Basicamente existem três tipos de arquivos que são utilizados com o .tar: tar.gzou .tgze .tar.bz2
+
+Algumas opções do tar:
+• -c cria um novo arquivo.tar e adiciona os arquivos a serem compactados; 
+• -f indica que o destino é um arquivo em disco; 
+• -v exibe o nome de cada arquivo compactado; 
+• -x extrai os arquivos agrupados no arquivo.tar.
+
+# tar -cf  backup.tar *.txt ... agrupa
+# tar -xvf backup.tar *.txt ... desagrupa
+
+O .tar.gz consiste em dois processos diferentes e interligados, sendo que primeiro ele cria um arquivo .tar e, em seguida, compacta utilizando o formato .gz
+# tar -zcvf backup.tar.gz *.txt ... compacta
+# tar -zxvf backup.tar.gz       ... descompacta
+
+Como .tar.bz2 ocorre o mesmo caso que como .tar.gz: a compactação com o formato .bz2 é mais eficiente que o .gz, porém é mais lenta na hora de gerar a cópia.
+# tar -jcvf backup.tar.bz2 *.txt ... compacta
+# tar -jxvf backup.tar.bz2       ... descompacta
+
+Conhecendo o gzip/gunzip 
+Este é o programa de compressão mais utilizado no Linux.O gzip gera um arquivo no formato .gz
+# gzip -c -r *.txt > backup.gz ... compacta
+As opções -c e -r respectivamente informam que queremos criar um arquivo e compactar. Ao executarmos a compactação de vários arquivos utilizando o gzip, os arquivos serão concatenados
+em um só e em seguida comprimidos no formato .gz
+# gunzip backup.gz 
+Pode ser utilizado com as opções -c e -v para exibir o conteúdo a ser descompactado e informações sobre o nível de compactação dos arquivos
+Ao executar a descompactação com gunzip, o nosso arquivo backup.gz deixará de existir pois por padrão o gunzip extrai o arquivo comprimido no formato .gz e exclui o arquivo compacto
+
+Conhecendo o zip/unzip
+# zip backup.zip *.txt ... compacta
+# unzip backup.zip     ... descompacta 
+
+
+
+
+
+###############################
+###### SAP Data Services ######
+###############################
+Comando para inicializar o repository manager
+# sh ou csh
+# . ./al_env.sh
+# ./repoman -U<usuario> -P<senha> -N<banco> -S<TNS> -t<local ou central> -c(criar) -o(sobrescrever)
+Ex: # ./repoman -Usdsrep001 -Pdbbods01 -NOracle -SBOSAPD1 -tlocal -c -o
+
+Comando para inicializar o server manager
+# sh ou csh
+# . ./al_env.sh
+# ./svrcfg
+
+Comando para verificar se uma porta esta em modo LISTEN
+# netstat -lptn | grep <porta>
+Ex.:
+(Not all processes could be identified, non-owned process info
+ will not be shown, you would have to be root to see it all.)
+tcp        0      0 0.0.0.0:6400                0.0.0.0:*                   LISTEN      1867/boe_cmsd
+tcp        0      0 :::6400                     :::*                        LISTEN      1867/boe_cmsd
+
+Comando para verificar se o serviço do IPS/BI está executando
+# cd /opt/sap/sap_bobj
+# ps -ef | grep boe_cmsd
+Ex.:
+dbods     1867  1806  1 12:18 pts/1    00:01:35 /opt/sap/sap_bobj/enterprise_xi40/linux_x64//boe_cmsd -loggingPath /opt/sap/sap_bobj/logging/ -startedBySIA -requestport 48000 -port 6400 -fg -restart -name snelnxn95.cms -pidfile /opt/sap/sap_bobj/serverpids/snelnxn95_snelnxn95.CentralManagementServer.pid -dbinfo /opt/sap/sap_bobj/enterprise_xi40/linux_x64/_boe_snelnxn95.dbinfo -noauditor -autoboot
+dbods    58452 40106  0 14:11 pts/3    00:00:00 grep boe_cmsd
+
+Comando para obter o % usado por cada processo
+ps axo %mem,pid,euser,cmd | sort -nr | head -n 30
+
+Comando para descompactar arquivo SAP
+# SAPCAR -xvf *.SAR
+
+Pre-Requisitos:
+Execute os seguintes comandos para criar o diretório /sapboj/apps/bo e dar os direitos de (leitura, gravação e execução de direitos):
+mkdir -p /sapboj/apps/bo
+chown webuser /sapboj/apps/bo
+chmod 755 -R /sapboj/apps/bo
+
+
+
+
+
+
+
