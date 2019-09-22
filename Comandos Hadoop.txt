@@ -29,12 +29,22 @@ ssh root@localhost -p 2222
 VM HDP - Senha (root) : fermi666
 sudo shutdown now (power of)
 
+Usuarios:
+1. admin –  Administrador do sistema; 
+2. maria_dev – Responsável por preparar e obter “insights” a partir de dados. Ela usa bastante as ferramentas como Hive, Pig e Hbase; 
+3. raj_ops – Responsável pela construção de infraestrutura como pesquisa e desenvolvimento de atividades como projeto, instalação, configuração e administração do Hadoop. 
+             Possui conhecimentos sólidos de administração de sistemas operacionais; 
+4. holger_gov – Responsável pela governança de dados; 
+5. amy_ds – Cientista de dados.
+
+
 # Help
 $ hdfs dfs -help
 
 # Acesso ao HDFS (somente leitura) via HTTP
 https://hostNamenode:50070 
 https://hostDatanode:50075
+http://localhost:8088/ (YARN)
 
 # FSImage e Edit_Log do HDFS
 /hadoop/hdfs/namenode/current
@@ -117,13 +127,30 @@ $ echo "foo foo quux labs foo bar quux" | /home/um_usuario_linux/mapper.py | sor
 # Executar o Hadoop Streaming para MapReduce
   Para implantar o codigo no cluster, precisamos submeter o JAR do Hadoop Streaming ao cliente de Job, passando nossos operadores personalizados
   como argumentos.
-$ hadoop jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar
-  -file /home/um_usuario_linux/mapper.py      (envia o arquivo a cada nó do cluster antes do processamento, caso contrario é assumido que já estão lá)
-  -file /home/um_usuario_linux/reducer.py     (envia o arquivo a cada nó do cluster antes do processamento, caso contrario é assumido que já estão lá)
-  -mapper /home/um_usuario_linux/mapper.py
-  -reducer /home/um_usuario_linux/reducer.py
-  -input /usr/um_usuario_do_hdfs/arquivo.txt 
-  -output saida
+$ hadoop jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar 
+ -file /home/maria_dev/hadoop_streaming/mapper_hs.py    (envia o arquivo a cada nó do cluster antes do processamento, caso contrario é assumido que já estão lá)
+ -file /home/maria_dev/hadoop_streaming/reducer_hs.py   (envia o arquivo a cada nó do cluster antes do processamento, caso contrario é assumido que já estão lá)
+ -mapper "python mapper_hs.py" 
+ -reducer "python reducer_hs.py" 
+ -input entrada_ContaPalavras.txt                       (fazer o upload do arquivo para o HDFS antes)
+ -output ContaPalavras                                  (gera saida no HDFS)
+input e output devem ser paths HDFS e o path de output não pode existir no sistema de arquivos distribuído, caso contrário será gerado um erro (para evitar sobrescrever
+ou apagar dados no cluster)
+
+ 
+[maria_dev@sandbox-hdp ~]$ hdfs dfs -cat /user/maria_dev/ContaPalavras/part*    (visualizar o resultado)
+A       5
+B       5
+C       4
+D       3
+E       10
+
+
+# Visualizar Jobs MapRecuce em execução
+$ hadoop job -listar
+
+# Parar a execução de job MapReduce
+$ hadoop job -kill <jobID>
  
 Há ainda os frameworks mrjob da Yelp e o Dumbo para escrever MapReduce.
 No caso de programação MapReduce temos:

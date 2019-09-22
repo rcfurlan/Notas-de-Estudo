@@ -15,6 +15,9 @@ http://www-personal.umich.edu/~mejn/computational-physics/
 # Learning Data Science: Day 9 - Linear Regression on Boston Housing Dataset
 https://medium.com/@haydar_ai/learning-data-science-day-9-linear-regression-on-boston-housing-dataset-cd62a80775ef
 
+# 10 Bibliotecas para Data Science
+https://medium.com/data-hackers/mais-10-bibliotecas-de-data-science-para-python-que-ningu%C3%A9m-te-conta-1a636837a404
+
 Python é uma linguagem poderosa e divertida. Com ela você pode fazer diversas coisas como:
 
 - Construção de sistemas Web com Django, Flask, Pyramid, etc.
@@ -22,7 +25,7 @@ Python é uma linguagem poderosa e divertida. Com ela você pode fazer diversas 
 - Construção de aplicativos com Kivy e Pybee
 - Construção de sistemas desktop com Tkinter, WxPython, etc.
 
-- Python é uma lnguagem interpretada, ou seja, existe uma camada de software (interpretador) entre o meu codigo e o sistema operacional.
+- Python é uma linguagem interpretada, ou seja, existe uma camada de software (interpretador) entre o meu codigo e o sistema operacional.
 
 - Principais linguagens utilzadas em ciencia de dados: Python, Java, R e Scala.
 
@@ -317,6 +320,8 @@ lambda x:x ** 2 - x é o parametro de entrada e a segunda parte é o retorno
 Ex: 
 potencia = lambda x:x**2
 potencia(2)
+ou
+(lambda x:x**2)(2)
 
 # Expressão with
 O comando with serve para facilitar a escrita de qualquer bloco de código que envolva recursos que precisam ser "finalizados" 
@@ -568,6 +573,8 @@ ou
 from collections import Counter
 lista = ['A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','B','B','B','B','B','B','B','B','B','B','B','B','B','B','B','B']
 dicionario = dict(Counter(lista))
+
+emit é uma função que realiza E/S no Hadoop
 
 # Listando arquivos em um diretorio
 import os

@@ -16,8 +16,8 @@ Shell
   
 Prompt
 ~ - é a abreviação para a pasta do usuário
-# - indica que o usuário não possui poderes de administrador
-$ - indica que o usuário possui poderes de administrador
+$ - indica que o usuário não possui poderes de administrador
+# - indica que o usuário possui poderes de administrador
     no Linux tudo é considerado um arquivo.
 
 Comando para mudar de shell
@@ -91,6 +91,7 @@ Comando para listar conteudo de pasta
 # ls ... listagem simples
 # ls -l ... listagem detalhada
 # ls -a ... conteudo oculto. Os arquivos ocultos possuem um "." no inicio e diretorios um ".:"
+# ls -1 ... um objeto por linha
 
 
 Comando para navegar em pastas

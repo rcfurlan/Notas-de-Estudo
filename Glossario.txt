@@ -507,7 +507,12 @@
 - YARN : Yet Another Resource Negotiator. Trata-se de uma plataforma de gerenciamento de recursos, responsável pelo gerenciamento dos recursos computacionais em cluster, 
          assim como pelo agendamento dos recursos. É um orquestrador de Jobs no Hadoop.
 		 
-- MapReduce : Modelo de programação para processamento em larga escala. A arquitetura do MapReduce é semelhante ao do HDFS, master-slave. No MapReduce os componentes são:
+- MapReduce : Modelo de programação para processamento em larga escala. MapReduce trabalha com duas primitivas de processamento de dados, Mapper e Reducer, o que torna a programação não muito trivial, 
+              além de ser diferente do que a maior parte dos desenvolvedores está acostumada.
+			  Na fase de mapeamento, o MapReduce pega os dados de entrada e envia cada um dos elementos de dados para a função Mapper. 
+			  Já na fase de redução, a função Reducer processa todas as saídas da função Mapper e chega a um resultado final. 
+			  Em outros termos, a função Mapper é feita para filtrar e transformar os dados que serão agregados pela função Reducer.
+              A arquitetura do MapReduce é semelhante ao do HDFS, master-slave. No MapReduce os componentes são:
               JobTracker: Ele recebe o job MapReduce e programa as tarefas map e reduce para execução, coordenando as atividades nos TaskTrackers.
 			  TaskTracker: Componente responsável por executar as tarefas de map e reduce, e informar o progresso das atividades.
 			  >> Map - Extrai algo que voce espera de cada registro
@@ -524,6 +529,7 @@
 				def reduce(intermed_key, values):
 					#Efetua processamento
 					return (key, output)
+					
 			  A versão atual do Hadoop MapReduce é um framework de software para compor jobs que processem grandes quantidades de dados em paralelo em um cluster, e é o framework
 			  de processamento distribuído nativo que acompanha o Hadoop. Os JOBS são COMPILADOS e EMPACOTADOS em um JAR, que é submetido ao ResourceManager pelo cliente do job - 
 			  geralmente por meio da linha de comando. O ResourceManager então escalona e monitora as tarefas, além de oferecer um status de volta ao cliente.
